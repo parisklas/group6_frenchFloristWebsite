@@ -1,3 +1,22 @@
+/* Colors - variables */
+:root {
+    --bg-light-pink: #fffafb;
+    --bg-dark-pink: #fae9e8;
+    --btn-main: #8ea960;
+}
+/* Fonts - variables */
+:root {
+    --heading-font: "Cormorant Garamond";
+    --body-font: "Khula";
+    --btn-font: "Cormorant Garamond";
+}
+
+
+html {
+    font: regular 10px var(--body-font);
+    
+}
+
 
 
 /*This code makes images responsive! Always include */
