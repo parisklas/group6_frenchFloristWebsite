@@ -3,14 +3,8 @@
   ------------------------------------
     01: Color and font variables
     02: Global styles
-<<<<<<< Updated upstream
     03: Header and Nav
     04: Main body content
-=======
-    03: Generic selectors (such as generic classes or ids)
-    04: Header and Nav
-    05: Main body content
->>>>>>> Stashed changes
     06: Footer
     07: Landing page
         07.1 Landing, hero section
@@ -22,17 +16,9 @@
             09.1.b Product page
         09.2 large screen
         09.3 very large screen
-<<<<<<< Updated upstream
         09.4 Layouts
             09.4.a two column
             09.4.b three column
-=======
-    10: Layouts
-        10.1 two column
-        10.2 three column
-
-
->>>>>>> Stashed changes
 
 
 ------------------------------------------------------
@@ -67,10 +53,7 @@ body {
     font-family: var(--body-font), "Open Sans", sans-serif;
     line-height: 1.2;
 }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 img {
     max-width: 100%;
     height: auto;
