@@ -1,3 +1,50 @@
+/* ------------------------------------------------------
+        TABLE OF CONTENTS
+  ------------------------------------
+    01: Color and font variables
+    02: Global styles
+<<<<<<< Updated upstream
+    03: Header and Nav
+    04: Main body content
+=======
+    03: Generic selectors (such as generic classes or ids)
+    04: Header and Nav
+    05: Main body content
+>>>>>>> Stashed changes
+    06: Footer
+    07: Landing page
+        07.1 Landing, hero section
+        07.2 Landing, products
+    08: About page
+    09: Media queries
+        09.1 tablet
+            09.1.a About / Team pages
+            09.1.b Product page
+        09.2 large screen
+        09.3 very large screen
+<<<<<<< Updated upstream
+        09.4 Layouts
+            09.4.a two column
+            09.4.b three column
+=======
+    10: Layouts
+        10.1 two column
+        10.2 three column
+
+
+>>>>>>> Stashed changes
+
+
+------------------------------------------------------
+*/
+
+
+
+
+/* ------------------------------------------------------
+        Color and font variables
+-------------------------------------------------------*/
+
 /* Colors - variables */
 :root {
     --bg-light-pink: #fffafb;
@@ -11,15 +58,116 @@
     --btn-font: "Cormorant Garamond";
 }
 
+/* ------------------------------------------------------
+        Global styles
+-------------------------------------------------------*/
 
-html {
-    font: regular 10px var(--body-font);
-    
+html { font-size: 10px; }
+body {
+    font-family: var(--body-font), "Open Sans", sans-serif;
+    line-height: 1.2;
 }
+<<<<<<< Updated upstream
+=======
 
-
-/*This code makes images responsive! Always include */
+>>>>>>> Stashed changes
 img {
     max-width: 100%;
     height: auto;
 }
+.btn {
+    font: small-caps bold 1.2rem var(--btn-font), sans-serif;
+    color: black;
+    background-color: var(--btn-main);
+    padding: .6em;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    border-radius: 6px;
+}
+
+a.btn {
+    margin-top: 30px;
+}
+
+/* ------------------------------------------------------
+        Header and Nav
+-------------------------------------------------------*/
+
+header {
+    background: url(../images/backgroundSmall.jpg) no-repeat;
+    position: relative;
+}
+
+header img {
+    height: 100px;
+    width: 79px;
+    margin: 1em;
+}
+
+/* toggle navigation */
+nav ul.navBar {
+    font: small-caps bold 1.8rem var(--heading-font), sans-serif;
+    display: none;
+}
+
+nav li {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+    border-bottom: solid 1px #fae9e8;
+}
+
+/* This is a decendent selector */
+nav li:first-child {
+    border-top: solid 1px #fae9e8;
+}
+
+nav a {
+    display: block;
+    color: black;
+    padding: .6em;
+    text-decoration: none;
+}
+
+.showNavBar {
+    cursor: pointer;
+}
+
+nav i {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    
+}
+
+/* This is a checked pseudo-class selector - it looks for the checkbox and sees if it's checked. If it is, it will target the next direct sibling (ul with a class of navBar) and open it up. */
+nav input[type=checkbox]:checked ~ ul.navBar {
+    display: block;
+}
+nav input[type=checkbox] {
+    display: none;
+}
+
+/* ------------------------------------------------------
+        Main Body Content
+-------------------------------------------------------*/
+h1 {
+    font: small-caps bold 3rem var(--heading-font), sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font: 1.4rem var(--body-font), sans-serif;
+}
+
+.hero {
+    background-color: var(--bg-dark-pink);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+
+
+
+
+
