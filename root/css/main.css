@@ -3,22 +3,31 @@
   ------------------------------------
     01: Color and font variables
     02: Global styles
-    03: Header and Nav
-    04: Main body content
+    03: Generic selectors
+    04: Header and Nav
+    05: Main body content
     06: Footer
     07: Landing page
         07.1 Landing, hero section
-        07.2 Landing, products
+        07.2 Landing, collections
     08: About page
-    09: Media queries
-        09.1 tablet
-            09.1.a About / Team pages
-            09.1.b Product page
-        09.2 large screen
-        09.3 very large screen
-        09.4 Layouts
-            09.4.a two column
-            09.4.b three column
+    09: Occasions page
+    10: Flowers page
+    11: Plants page
+    12: Weddings/Events page
+    13: Subscriptions page
+    14: My account page
+    15: Shopping cart page
+    16: Media queries
+        16.1 tablet
+            16.1.a About page
+            16.1.b Occasions page
+            etc
+        16.2 large screen
+        16.3 very large screen
+        16.4 Layouts
+            16.4.a two column
+            16.4.b three column
 
 
 ------------------------------------------------------
@@ -39,9 +48,9 @@
 }
 /* Fonts - variables */
 :root {
-    --heading-font: "Cormorant Garamond";
-    --body-font: "Khula";
-    --btn-font: "Cormorant Garamond";
+    --heading-font: "Cormorant Garamond", sans-serif;
+    --body-font: "Khula", sans-serif;
+    --btn-font: "Cormorant Garamond", sans-serif;
 }
 
 /* ------------------------------------------------------
@@ -50,7 +59,7 @@
 
 html { font-size: 10px; }
 body {
-    font-family: var(--body-font), "Open Sans", sans-serif;
+    font-family: var(--body-font, "Open Sans");
     line-height: 1.2;
 }
 
@@ -58,8 +67,12 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* ------------------------------------------------------
+        Generic Selectors
+-------------------------------------------------------*/
 .btn {
-    font: small-caps bold 1.2rem var(--btn-font), sans-serif;
+    font: small-caps bold 1.2rem var(--btn-font);
     color: black;
     background-color: var(--btn-main);
     padding: .6em;
@@ -68,9 +81,6 @@ img {
     border-radius: 6px;
 }
 
-a.btn {
-    margin-top: 30px;
-}
 
 /* ------------------------------------------------------
         Header and Nav
@@ -89,7 +99,7 @@ header img {
 
 /* toggle navigation */
 nav ul.navBar {
-    font: small-caps bold 1.8rem var(--heading-font), sans-serif;
+    font: small-caps bold 1.8rem var(--heading-font);
     display: none;
 }
 
@@ -131,16 +141,22 @@ nav input[type=checkbox] {
     display: none;
 }
 
+/* Need to specify colors here : */
+a:link { }
+a:visited { }
+a:hover { }
+a:active { }
+
 /* ------------------------------------------------------
         Main Body Content
 -------------------------------------------------------*/
 h1 {
-    font: small-caps bold 3rem var(--heading-font), sans-serif;
+    font: small-caps bold 3rem var(--heading-font);
     text-align: center;
 }
 
 h2 {
-    font: 1.4rem var(--body-font), sans-serif;
+    font: 1.4rem var(--body-font);
 }
 
 .hero {
