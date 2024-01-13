@@ -5,13 +5,14 @@
     02: Global styles
     03: Generic selectors
     04: Header and Nav
-    05: Home page
-        05.1 Hero section
-        05.2 Collections
-        05.3 Subscriptions
-    06: About page
-    07: Occasions page
-    08: Flowers page
+    05: Footer
+    xx: Home page
+        xx.1 Hero section
+        xx.2 Collections
+        xx.3 Subscriptions
+    xx: About page
+    xx: Occasions page
+    xx: Flowers page
     xx: Plants page
     xx: Weddings/Events page
     xx: Subscriptions page
@@ -37,7 +38,7 @@
 
 
 /* ------------------------------------------------------
-        Color and font variables
+        COLOR AND FONT VARIABLES
 -------------------------------------------------------*/
 
 /* Colors - variables */
@@ -45,16 +46,17 @@
     --bg-light-pink: #fffafb;
     --bg-dark-pink: #fae9e8;
     --bg-btn-main: #8ea960;
+    --bg-btn-alternate: #fffafb;
 }
 /* Fonts - variables */
 :root {
-    --heading-font: "Cormorant Garamond", sans-serif;
+    --heading-font: "Cormorant Garamond", serif;
     --body-font: "Khula", sans-serif;
-    --btn-font: "Cormorant Garamond", sans-serif;
+    --btn-font: "Cormorant Garamond", serif;
 }
 
 /* ------------------------------------------------------
-        Global styles
+        GLOBAL STYLES
 -------------------------------------------------------*/
 
 html { font-size: 10px; }
@@ -62,10 +64,18 @@ body {
     font-family: var(--body-font, "Open Sans");
 }
 h1 {
+    font: 700 3.3rem var(--heading-font);
+    text-transform: uppercase;
+    text-align: center;
+}
+h2 {
     font: 700 3.2rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
+}
+h3 {
+
 }
 p {
     font: 2rem var(--body-font);
@@ -78,13 +88,14 @@ p {
 img {
     max-width: 100%;
     height: auto;
-    margin: 1.5em 0;
+    margin: 1.5em;
 }
 a {
     text-decoration: none;
+    color: black;
 }
 /* ------------------------------------------------------
-        Generic Selectors
+        GENERIC SELECTORS
 -------------------------------------------------------*/
 .btn {
     font: 700 1.6rem var(--btn-font);
@@ -103,9 +114,13 @@ img.logo {
     margin: 1em;
 }
 
+.current {
+    /* add "current page" styling here */
+}
+
 
 /* ------------------------------------------------------
-        Header and Nav
+        HEADER AND NAV
 -------------------------------------------------------*/
 
 header {
@@ -165,31 +180,9 @@ a:hover {
 }
 a:active { }
 
-/* ------------------------------------------------------
-        Home Page Content
--------------------------------------------------------*/
-
-.hero {
-    background-color: var(--bg-dark-pink);
-    text-align: center;
-    padding: 5rem 2rem;
-}
-
-.collections {
-    background-color: var(--bg-light-pink);
-    text-align: center;
-    padding: 5rem 2rem;
-}
-
-.subs {
-    background-color: var(--bg-dark-pink);
-    text-align: center;
-    padding: 5rem 2rem;
-}
-
 
 /* ------------------------------------------------------
-        Footer
+        FOOTER
 -------------------------------------------------------*/
 footer {
     background: url(../images/backgroundSmall.jpg) no-repeat;
@@ -243,9 +236,84 @@ footer i {
     margin-right: 1.5em;
 }
 
+/* ------------------------------------------------------
+        HOME PAGE CONTENT
+-------------------------------------------------------*/
+
+.hero {
+    background-color: var(--bg-dark-pink);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.collections {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.subs {
+    background-color: var(--bg-dark-pink);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
 
 /* ------------------------------------------------------
-        Media Queries
+        ACCOUNT PAGE CONTENT
+-------------------------------------------------------*/
+
+p#name {
+    font-weight: 700;
+    padding: 1em 0 0 1em;
+}
+
+.btnAccount {
+    font: 700 1.6rem var(--btn-font);
+    color: black;
+    text-transform: uppercase;
+    background-color: var(--bg-btn-alternate);
+    width: 25.7rem;
+    height: 4rem;
+    padding: 1rem 1.2rem;
+    border-radius: .6rem;
+}
+
+.container {
+    background-color: var(--bg-light-pink);
+    width: 80%;
+    margin: auto;
+    border-radius: 6px;
+    padding-bottom: 2em;
+}
+
+.accountLinks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 10%;
+    padding-top: 5em;
+}
+
+.accountPage {
+    background-color: var(--bg-dark-pink);
+    padding-bottom: 3em;
+}
+
+.order p {
+    padding: 0 0 0 1em;
+    margin: 0;
+}
+
+.order img {
+    margin: 0;
+    padding: 2em;
+}
+
+/* ------------------------------------------------------
+        MEDIA QUERIES
 -------------------------------------------------------*/
 
 
@@ -268,7 +336,6 @@ footer i {
         background: none;
     }
   
-    
 }
 
 
