@@ -14,22 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
     <!-- external stylesheet -->
     <link href="../css/main.css" rel="stylesheet" type="text/css">
-    <!-- Handlebars CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-    <!-- Handlebars script -->
-    <script id="templateHB" type="text/x-handlebars-template">
-        {{#each orders}}
-            <article class="order">
-                <p id="name">{{this.name}}</p>
-                <p>Order placed: {{this.datePurchased}}</p>
-                <img src="{{this.image}}" alt="{{this.name}}">
-                <section class="accountLinks">
-                    <a href="#" class="btn">Buy Again</a>
-                    <a href="#" class="btn">Order Details</a>
-                </section>
-            </article>
-        {{/each}}
-    </script>
 </head>
 
 <body>
@@ -45,30 +29,71 @@
                 <li><a href="../pages/flowers.html">Flowers</a></li>
                 <li><a href="../pages/plants.html">Plants</a></li>
                 <li><a href="../pages/events.html">Weddings/Events</a></li>
-                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
                 <!-- Hide icons in hamburger menu, show when page expands -->
                 <li class="hide"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="hide current"><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li class="hide"><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
                 <li class="hide"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="accountPage">
-            <article class="accountLinks">
-                <h1>My Account</h1>
-                <a href="#" class="btnAccount">My Orders</a>
-                <a href="#" class="btnAccount">My Profile</a>
-                <a href="#" class="btnAccount">My Rewards</a>
-                <a href="#" class="btnAccount">My Settings</a>
-            </article>
-            <article id="showcase">
-                <h2>My Orders</h2>
-                <!--How do I make this h2 change with page selection ??? -->
-                <section class="container" id="information"></section>
-            </article>
-        </section>
+        <form>
+            <fieldset>
+                <legend>Choose a size:</legend>
+                <ul>
+                    <li>
+                        <input type="radio" id="classic" value="classic" name="size">
+                        <label for="classic">Classic Blooms</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="signature" value="signature" name="size">
+                        <label for="signature">Signature Collection</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="majestic" value="majestic" name="size">
+                        <label for="majestic">Majestic Arrangements</label>
+                    </li>
+                </ul> 
+            </fieldset>
+            <fieldset>
+                <legend>Choose duration:</legend>
+                <label for="duration"></label>
+                <select name="duration" id="duration">
+                    <option value="continous">Continuously (cancel anytime) selected</option>
+                    <option value="3mo">3 Months</option>
+                    <option value="6mo">6 Months</option>
+                    <option value="9mo">9 Months</option>
+                    <option value="12mo">12 Months</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Choose frequency:</legend>
+                <ul>
+                    <li>
+                        <input type="radio" id="weekly" value="weekly" name="frequency">
+                        <label for="weekly">Delivery once a week</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="every2" value="every2" name="frequency">
+                        <label for="every2">Delivery every other week</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="every3" value="every3" name="frequency">
+                        <label for="every3">Delivery every 3 weeks</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="every4" value="every4" name="frequency">
+                        <label for="every4">Delivery every 4 weeks</label>
+                    </li>
+                </ul> 
+            </fieldset>
+            <fieldset>
+                <legend>Your information:</legend>
+            </fieldset>
+        </form>
+
     </main>
 
     <footer>
@@ -92,7 +117,6 @@
         </section>
     </footer>
 
-    <script src="../scripts/main.js"></script>
 </body>
 
 
