@@ -55,7 +55,7 @@
                         <input type="radio" id="majestic" value="majestic" name="size">
                         <label for="majestic">Majestic Arrangements</label>
                     </li>
-                </ul> 
+                </ul>
             </fieldset>
             <fieldset>
                 <legend>Choose duration:</legend>
@@ -87,10 +87,59 @@
                         <input type="radio" id="every4" value="every4" name="frequency">
                         <label for="every4">Delivery every 4 weeks</label>
                     </li>
-                </ul> 
+                </ul>
             </fieldset>
             <fieldset>
                 <legend>Your information:</legend>
+                <li>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                </li>
+                <li>
+                    <label for="fname">Last name:</label>
+                    <input type="text" id="lname" name="lname" required>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </li>
+                <li>
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </li>
+                <li>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </li>
+                <li>
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </li>
+                <li>
+                    <label for="zip">Zip</label>
+                    <input type="text" id="zip" name="zipCode" required>
+                </li>
+            </fieldset>
+            <fieldset>
+                <legend>Payment Info:</legend>
+                <ul>
+                    <li>
+                        <input type="radio" id="credit" value="credit" name="payment">
+                        <label for="every4">Credit Card</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="paypal" value="paypal" name="payment">
+                        <label for="paypal">PayPal</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="terms">I have read and agree to the terms and conditions.</label>
+                    </li>
+                </ul>
             </fieldset>
         </form>
 
