@@ -332,6 +332,17 @@ p#name {
     padding: 4em 1em;
 }
 
+/* ------------------------------------------------------
+        ABOUT PAGE CONTENT
+-------------------------------------------------------*/
+
+.project {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+
 
 /* ------------------------------------------------------
         MEDIA QUERIES
