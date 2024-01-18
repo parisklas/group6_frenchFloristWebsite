@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 
 
-// Handlebars for account page: 
+// Handlebars for account page:
 
 const context = {
     orders: [
@@ -48,8 +48,9 @@ const context = {
             name: 'Hello Fall',
             datePurchased: 'Sept. 23, 2023',
             image: '../images/orders3.jpg'
-            
+
         }
+
     ]
 };
 
@@ -60,4 +61,4 @@ const compiledHtml = template(context);
 document.getElementById('information').innerHTML = compiledHtml;
 
 
-// 
+//

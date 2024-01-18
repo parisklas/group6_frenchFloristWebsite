@@ -69,21 +69,24 @@ body {
     font-family: var(--body-font, "Open Sans");
 }
 h1 {
-    font: 700 3.3rem var(--heading-font);
+    font: 700 3.1rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
 }
 h2 {
-    font: 700 3.2rem var(--heading-font);
+    font: 700 2.8rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
 }
 h3 {
-    font: 700 2.6rem var(--heading-font);
+    font: 700 2.5rem var(--heading-font);
     text-transform: uppercase;
     line-height: 1.5;
     margin-left: 1em;
+}
+h4 {
+
 }
 p {
     font: 2rem var(--body-font);
@@ -101,6 +104,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 /* ------------------------------------------------------
         GENERIC SELECTORS
 -------------------------------------------------------*/
@@ -183,7 +187,7 @@ a:link {
     color: black;
 }
 a:visited { }
-a:hover { 
+a:hover {
     cursor: pointer;
 }
 a:active { }
@@ -232,7 +236,7 @@ footer i {
     font-size: 2em;
     display: flex;
     justify-content: space-evenly;
-    align-self: center; 
+    align-self: center;
 }
 
 .logoPlacement {
@@ -309,6 +313,8 @@ figcaption {
 }
 
 
+
+
 /* ------------------------------------------------------
         ACCOUNT PAGE CONTENT
 -------------------------------------------------------*/
@@ -335,7 +341,7 @@ p#name {
 }
 
 .showcase {
-    
+
 }
 
 .container {
@@ -403,6 +409,12 @@ p#name {
 
 
 /* ------------------------------------------------------
+        EVENT PAGE CONTENT
+-------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------
         MEDIA QUERIES
 -------------------------------------------------------*/
 
@@ -448,11 +460,4 @@ header {
 .showNav {
     display: none;
 }
-
-
-
-
-
-
-
-
+}
