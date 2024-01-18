@@ -64,21 +64,24 @@ body {
     font-family: var(--body-font, "Open Sans");
 }
 h1 {
-    font: 700 3.3rem var(--heading-font);
+    font: 700 3.1rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
 }
 h2 {
-    font: 700 3.2rem var(--heading-font);
+    font: 700 2.8rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
 }
 h3 {
-    font: 700 2.6rem var(--heading-font);
+    font: 700 2.5rem var(--heading-font);
     text-transform: uppercase;
     line-height: 1.5;
     margin-left: 1em;
+}
+h4 { 
+
 }
 p {
     font: 2rem var(--body-font);
@@ -96,6 +99,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 /* ------------------------------------------------------
         GENERIC SELECTORS
 -------------------------------------------------------*/
@@ -148,6 +152,7 @@ nav li {
 }
 
 /* This is a decendent selector */
+/* LOOK INTO THIS - WHY IS IT SHOWING UP FOR  */
 nav li:first-child {
     border-top: solid 1px #fae9e8;
 }
@@ -262,6 +267,8 @@ footer i {
 }
 
 
+
+
 /* ------------------------------------------------------
         ACCOUNT PAGE CONTENT
 -------------------------------------------------------*/
@@ -345,6 +352,12 @@ p#name {
 
 
 /* ------------------------------------------------------
+        EVENT PAGE CONTENT
+-------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------
         MEDIA QUERIES
 -------------------------------------------------------*/
 
@@ -368,6 +381,9 @@ p#name {
         background: none;
     }
   
+/* HOME PAGE    */
+    
+    
 }
 
 

@@ -11,7 +11,13 @@ const context = {
             name: 'White Orchids',
             datePurchased: 'Oct. 30, 2023',
             image: '../images/home-page1.jpg'
+        },
+        {
+            name: 'Tulips',
+            datePurchased: 'Jan 17, 2021',
+            image: '../images/home-page1.jpg'
         }
+        
     ]
 };
 
