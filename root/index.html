@@ -9,73 +9,94 @@
     <!-- external CSS reset file -->
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- link to our own external js file -->
+    <script src="scripts/main.js"></script>
     <!-- external stylesheet -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
     <header>
-        <img src="images/smallLogo.svg" class="logo" alt="logo">
-        <!--        Hamburger menu Nav     -->
-        <nav>
-            <input type="checkbox" id="showNavBar" role="button">
-            <label for="showNavBar" class="showNavBar"><i class="fa-solid fa-bars"></i></label>
-            <ul class="navBar">
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/occasions.html">Occasions</a></li>
-                <li><a href="pages/flowers.html">Flowers</a></li>
-                <li><a href="pages/plants.html">Plants</a></li>
-                <li><a href="pages/events.html">Weddings/Events</a></li>
-                <li><a href="pages/subscriptions.html">Subscriptions</a></li>
-                <!-- Hide icons in hamburger menu, show when page expands -->
-                <li class="hide"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="hide"><a href="pages/account.html"><i class="fa-regular fa-user"></i></a></li>
-                <li class="hide"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-    </header>
+            <div class="header-left">
+                <a href="index.html"><img src="images/logo_white.jpg" alt="logo" class="logo"></a>
+            </div>
+            <nav class="header-open">
+                <ul>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/occasions.html">Occasions</a></li>
+                    <li><a href="pages/flowers.html">Flowers</a></li>
+                    <li><a href="pages/plants.html">Plants</a></li>
+                    <li><a href="pages/events.html">Weddings &amp; Events</a></li>
+                    <li><a href="pages/subscriptions.html">Subscriptions</a></li>
+                    <li><a href="pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+                <a href="#" class="showNav">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </nav>
+            <nav class="hamburger-menu">
+                <ul>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/occasions.html">Occasions</a></li>
+                    <li><a href="pages/flowers.html">Flowers</a></li>
+                    <li><a href="pages/plants.html">Plants</a></li>
+                    <li><a href="pages/events.html">Weddings &amp; Events</a></li>
+                    <li><a href="pages/subscriptions.html">Subscriptions</a></li>
+                    <li><a href="pages/account.html">My Account</a></li>
+                    <li><a href="pages/cart.html">My Cart</a></li>
+                </ul>
+                <a href="#" class="closeNav">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </nav>
+                <input type="text" class="searchBar" placeholder="Search for anything!">    
+        </header>
 
-    <main>
+    <main class="homePage">
         <section class="title">
-            <h1>French Florist</h1>
+            <h1 class="fadeIn">Welcome to<br><span>The French Florist</span></h1>
         </section>
         <section class="hero">
             <article>
-                <h2>Vibrant Flowers</h2>
+                <h2>Vibrant Flower Arrangements</h2>
                 <img src="images/home-page1.jpg" alt="bouquet of flowers">
                 <p>Experience the finest blooms handpicked by our florists worldwide. Enjoy beautiful arrangements with delivery across Los Angeles, Ventura, and Orange County.</p>
-                <a href="" class="btn">Find your perfect flower</a>
+                <a href="pages/flowers.html" class="btn">Find your perfect flower</a>
             </article>
         </section>
         <section class="collections">
             <h2>Collections</h2>
             <figure>
-                <img src="" alt="tropical flowers">
+                <img src="images/collections1.jpg" alt="tropical flowers">
                 <figcaption>Tropical Flowers</figcaption>
             </figure>
             <figure>
-                <img src="" alt="vase compositions">
+                <img src="images/collections2.jpg" alt="vase compositions">
                 <figcaption>Vase Compositions</figcaption>
             </figure>
             <figure>
-                <img src="" alt="designer flowers">
+                <img src="images/collections3.jpg" alt="designer flowers">
                 <figcaption>Designer Choices</figcaption>
             </figure>
             <figure>
-                <img src="" alt="elaborate flowers">
+                <img src="images/collections4.jpg" alt="elaborate flowers">
                 <figcaption>Elaborate Choices</figcaption>
             </figure>
-            <a href="" class="btn">Shop All</a>
+            <a href="pages/flowers.html" class="btn">Shop All</a>
         </section>
         <section class="subs">
             <article>
                 <h2>Subscriptions</h2>
                 <p>Our Custom Blooms program offers a personalized flower subscription, allowing you to choose the free delivery frequency of your perfect flowers to suit your lifestyle.</p>
-                <a href="" class="btn">Subscription Options</a>
+                <img src="images/home_subs1.jpg" alt="pink flowers in glass vase">
+                <a href="pages/subscriptions.html" class="btn">Subscription Options</a>
             </article>
         </section>
     </main>
@@ -83,10 +104,10 @@
     <footer>
         <section class="info">
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
+            <a href="#">Terms &amp; Conditions</a>
         </section>
         <section class="text">
-            <p>Copyright &copy 2023</p>
+            <p>Copyright &copy; 2023</p>
             <p>French Florist.</p>
             <p>All Rights Reserved.</p>
         </section>
@@ -97,7 +118,7 @@
             <a href="https://www.yelp.com/biz/french-florist-los-angeles"><i class="fa-brands fa-yelp"></i></a>
         </section>
         <section class="logoPlacement">
-            <img src="images/smallLogo.svg" class="logo" alt="logo">
+            <img src="images/logo_white.jpg" class="logo" alt="logo">
         </section>
 
     </footer>
