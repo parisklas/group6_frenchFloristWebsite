@@ -22,6 +22,24 @@
 
 <body>
     <header>
+
+        <img src="../images/smallLogo.svg" class="logo" alt="logo">
+        <!--        Hamburger menu Nav     -->
+        <nav>
+            <input type="checkbox" id="showNavBar" role="button">
+            <label for="showNavBar" class="showNavBar"><i class="fa-solid fa-bars"></i></label>
+            <ul class="navBar">
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/occasions.html">Occasions</a></li>
+                <li><a href="../pages/flowers.html">Flowers</a></li>
+                <li><a href="../pages/plants.html">Plants</a></li>
+                <li><a href="../pages/events.html">Weddings/Events</a></li>
+                <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <!-- Hide icons in hamburger menu, show when page expands -->
+                <li class="hide"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li class="hide"><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li class="hide"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
         <div class="header-left">
             <a href="../index.html"><img src="../images/logo_white.jpg" alt="logo" class="logo"></a>
         </div>
@@ -36,6 +54,7 @@
                 <li><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
                 <li><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+
             </ul>
             <a href="#" class="showNav">
                 <i class="fa-solid fa-bars"></i>
@@ -65,7 +84,7 @@
             <section class="intro">
                 <article>
                     <h2>About Us</h2>
-                    <img src="../images/home-page1.jpg" alt="Flagship store">
+                    <img src="../images/about.jpeg" alt="Flagship store">
                     <p>Welcome to French Florist, your local flower haven in the heart of Los Angeles.We are proud and honoured to be LA's largest flower company!As the #1 local florist, we take pride in offering unmatched same-day flower delivery, weaving our comunity together one bloom at a time.</p>
                     <p> We first opened our doors in 1978, and were one of the first to specialize in personalized and customizable floral arrangements. Our goal was to bring a modern twist to the floral industry. Since the infancy of our buisiness we were willing to move mountains to ensure that we delivered the floral arrangement you envisioned for your loved ones.</p>
                     <p>With 43 years of experience we continue to raise the bar in the floral industry in order to reach petal perfection. Join us in making every moment memorable with the charm of local flowers and the warmth of community spirit.</p>
@@ -98,6 +117,7 @@
              <p></p>
              <p></p>
              <p></p>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696865.5178974704!2d-119.61329844912369!3d33.83319844792366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b9681cbfa321%3A0x314716dffa15768f!2sFrench%20Florist!5e0!3m2!1sen!2sus!4v1705683113820!5m2!1sen!2sus" width="425" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
              </article>
          </section>
          <section>
@@ -105,7 +125,7 @@
              <a href="../pages/form.html" class="btn">Delivery Options</a>
              <a href="#" class="btn">FAQ</a>
              <a href="#" class="btn">Our Blog</a>
-             <a href="#" class="btn">Contact Us</a>
+             <a href="../pages/form.html" class="btn">Contact Us</a>
              </article>
          </section>
         </main>
