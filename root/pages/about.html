@@ -12,51 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- link to our own external js file -->
-    <script src="../scripts/main.js"></script>
     <!-- external stylesheet -->
     <link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <header>
-        <div class="header-left">
-            <a href="../index.html"><img src="../images/logo_white.jpg" alt="logo" class="logo"></a>
-        </div>
-        <nav class="header-open">
-            <ul>
-                <li class="current"><a href="../pages/about.html">About</a></li>
+        <img src="../images/smallLogo.svg" class="logo" alt="logo">
+        <!--        Hamburger menu Nav     -->
+        <nav>
+            <input type="checkbox" id="showNavBar" role="button">
+            <label for="showNavBar" class="showNavBar"><i class="fa-solid fa-bars"></i></label>
+            <ul class="navBar">
+                <li><a href="../pages/about.html">About</a></li>
                 <li><a href="../pages/occasions.html">Occasions</a></li>
                 <li><a href="../pages/flowers.html">Flowers</a></li>
                 <li><a href="../pages/plants.html">Plants</a></li>
-                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
-                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
-                <li><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
-                <li><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="../pages/events.html">Weddings/Events</a></li>
+                <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <!-- Hide icons in hamburger menu, show when page expands -->
+                <li class="hide"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li class="hide"><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li class="hide"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
-            <a href="#" class="showNav">
-                <i class="fa-solid fa-bars"></i>
-            </a>
         </nav>
-        <nav class="hamburger-menu">
-            <ul>
-                <li class="current"><a href="../pages/about.html">About</a></li>
-                <li><a href="../pages/occasions.html">Occasions</a></li>
-                <li><a href="../pages/flowers.html">Flowers</a></li>
-                <li><a href="../pages/plants.html">Plants</a></li>
-                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
-                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
-                <li><a href="../pages/account.html">My Account</a></li>
-                <li><a href="../pages/cart.html">My Cart</a></li>
-            </ul>
-            <a href="#" class="closeNav">
-                <i class="fa-solid fa-xmark"></i>
-            </a>
-        </nav>
-        <input type="text" class="searchBar" placeholder="Search for anything!">
     </header>
 
        
