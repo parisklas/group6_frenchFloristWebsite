@@ -18,6 +18,7 @@
     xx: Subscriptions page
     xx: My account page
     xx: Shopping cart page
+    xx: Search bar
     xx: Footer
     xx: Media queries
         16.1 tablet
@@ -48,6 +49,7 @@
     --bg-btn-main: #8ea960;
     --bg-btn-alternate: #fffafb;
 }
+
 /* Fonts - variables */
 :root {
     --heading-font: "Cormorant Garamond", serif;
@@ -64,30 +66,36 @@
         GLOBAL STYLES
 -------------------------------------------------------*/
 
-html { font-size: 10px; }
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: var(--body-font, "Open Sans");
 }
+
 h1 {
     font: 700 3.1rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
 }
+
 h2 {
     font: 700 2.8rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
 }
+
 h3 {
     font: 700 2.5rem var(--heading-font);
     text-transform: uppercase;
     line-height: 1.5;
-    margin-left: 1em;
+    text-align: center;
 }
-h4 {
 
-}
+h4 {}
+
 p {
     font: 2rem var(--body-font);
     font-weight: 400;
@@ -95,11 +103,13 @@ p {
     line-height: 1.5;
     margin: 1em .5em;
 }
+
 img {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -127,7 +137,8 @@ img.logo {
 }
 
 .current {
-    /* add "current page" styling here */
+    /*    background-color: #FAA094;*/
+    border: 3px dotted #FAA094;
 }
 
 .intro {
@@ -142,7 +153,8 @@ img.logo {
 -------------------------------------------------------*/
 
 header {
-    background: url(../images/backgroundSmall.jpg) repeat;
+    background: url(../images/backgroundSmall.jpg);
+    background-size: cover;
     position: relative;
     height: 150px;
 }
@@ -153,17 +165,17 @@ nav ul {
 }
 
 .hamburger-menu {
-  display: none;
-  padding: 2em;
-  background-color: var(--bg-dark-pink);
+    display: none;
+    padding: 2em;
+    background-color: var(--bg-dark-pink);
 }
 
 .hamburger-menu ul li a {
-  background-color: var(--bg-light-pink);
-  text-align: center;
-  border-bottom: solid 1px #fae9e8;
-  display: block;
-  padding: .6em;
+    background-color: var(--bg-light-pink);
+    text-align: center;
+    border-bottom: solid 1px #fae9e8;
+    display: block;
+    padding: .6em;
 }
 
 .showNav {
@@ -173,24 +185,32 @@ nav ul {
     top: 60px;
     right: 50px;
 }
+
 .closeNav {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: black;
-  font-size: 30px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: black;
+    font-size: 30px;
 }
 
 /* Need to specify colors here : */
 a:link {
     color: black;
 }
-a:visited { }
+
 a:hover {
     cursor: pointer;
+    background-color: #455f45;
+    color: white;
+    padding: 7px;
+    border-radius: var(--border-radius);
 }
-a:active { }
+
+a:active {
+    background-color: #FAA094;
+}
 
 
 /* ------------------------------------------------------
@@ -245,7 +265,7 @@ footer i {
     align-self: flex-end;
 }
 
-.logoPlacement .logo{
+.logoPlacement .logo {
     height: 80px;
     box-shadow: 5px 5px 4px var(--bg-dark-pink);
     margin: .5em 1.5em;
@@ -258,9 +278,11 @@ footer i {
 .homePage {
     background-color: var(--bg-dark-pink);
 }
+
 .title {
     height: 20%;
 }
+
 h1.fadeIn {
     color: var(--bg-btn-main);
     font-family: 'Parisienne';
@@ -268,13 +290,16 @@ h1.fadeIn {
     padding: 1em 0;
     display: none;
 }
+
 h1 span {
     font-family: 'Jacques Francois';
     text-shadow: -2px 2px 2px var(--bg-light-pink);
 }
+
 .hero h2 {
     margin-bottom: .4em;
 }
+
 .collections {
     background-color: var(--bg-light-pink);
     padding: 5rem 0;
@@ -284,9 +309,11 @@ h1 span {
     justify-content: center;
     gap: 1em;
 }
+
 .homePage h2 {
     width: 100%;
 }
+
 .collections figure {
     max-width: 45%;
     margin: .5em 0;
@@ -297,11 +324,15 @@ figcaption {
     font-size: 1.6rem;
     font-family: var(--heading-font);
 }
-.collections a.btn, .subs a.btn, .hero a.btn {
+
+.collections a.btn,
+.subs a.btn,
+.hero a.btn {
     margin-top: 2em;
 }
 
-.subs article, .hero article {
+.subs article,
+.hero article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,6 +355,7 @@ figcaption {
     padding: 0 0 3em 0;
     width: 100%;
 }
+
 p#name {
     font-weight: 700;
     padding: 1em 0 0 1em;
@@ -340,9 +372,7 @@ p#name {
     border-radius: .6rem;
 }
 
-.showcase {
-
-}
+.showcase {}
 
 .container {
     background-color: var(--bg-light-pink);
@@ -368,6 +398,7 @@ p#name {
     flex-direction: column;
     align-items: center;
 }
+
 .order p {
     padding: 0 0 0 1em;
     margin: 0;
@@ -383,7 +414,8 @@ p#name {
         SUBSCRIPTION PAGE CONTENT
 -------------------------------------------------------*/
 
-#subIntro, #subHow {
+#subIntro,
+#subHow {
     background-color: var(--bg-dark-pink);
     padding: 4em 2.5em;
     display: flex;
@@ -391,9 +423,19 @@ p#name {
     align-items: center;
 }
 
+#subIntro a.btn,
+#subHow a.btn {
+    margin-top: 2em;
+}
+
 #subOptions {
     background-color: var(--bg-light-pink);
     padding: 4em 1em;
+}
+
+#subOptions h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--bg-dark-pink);
 }
 
 /* ------------------------------------------------------
@@ -414,50 +456,84 @@ p#name {
 
 
 
+
+/* ------------------------------------------------------
+        SEARCH BAR
+-------------------------------------------------------*/
+
+.searchBar {
+    font: 1.6rem var(--body-font);
+    position: absolute;
+    right: 60px;
+    top: 110px;
+    height: 18px;
+    width: 200px;
+    margin-right: 6px;
+    padding: .4em 1em;
+    border-radius: var(border-radius);
+    display: none;
+}
+
+
+
+
 /* ------------------------------------------------------
         MEDIA QUERIES
 -------------------------------------------------------*/
 
 /* FOR HAMBURGER MENU AT MOBILE VIEW */
 @media screen and (max-width: 700px) {
-  .header-open ul {
-      display: none;
-  }
+    .header-open ul {
+        display: none;
+    }
+
     /* > is a child selector that selects DIRECT child elements of a specified parent*/
-  .header-open > a {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    color: black;
-    font-size: 30px;
-  }
-  .hamburger-menu.active {
-      display: block;
-  }
+    .header-open > a {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: black;
+        font-size: 30px;
+    }
+
+    .hamburger-menu.active {
+        display: block;
+    }
+
+    a:hover {
+        cursor: pointer;
+        background-color: #455f45;
+        color: white;
+    }
 }
 
 
 
 
 @media only screen and (min-width: 700px) {
-/* NAV BAR AT FULL SCREEN */
- .header-open {
-    width: 90%;
-}
-header {
-    display: flex;
-    align-items: flex-end;
-}
-.header-open ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-.header-open ul li {
-    line-height: .8em;
-    padding: 8px 0;
-}
-.showNav {
-    display: none;
-}
+
+    /* NAV BAR AT FULL SCREEN */
+    .header-open {
+        width: 90%;
+    }
+
+    header {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .header-open ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .header-open ul li {
+        line-height: .8em;
+        padding: 8px 4px;
+    }
+
+    .showNav {
+        display: none;
+    }
 }
