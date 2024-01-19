@@ -5,37 +5,58 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>French Florist - My Account</title>
+    <title>French Florist - Subscribe Now</title>
     <!-- external CSS reset file -->
     <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- link to our own external js file -->
+    <script src="../scripts/main.js"></script>
     <!-- external stylesheet -->
     <link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <header>
-        <img src="../images/smallLogo.svg" class="logo" alt="logo">
-        <!--        Hamburger menu Nav     -->
-        <nav>
-            <input type="checkbox" id="showNavBar" role="button">
-            <label for="showNavBar" class="showNavBar"><i class="fa-solid fa-bars"></i></label>
-            <ul class="navBar">
+        <div class="header-left">
+            <a href="../index.html"><img src="../images/logo_white.jpg" alt="logo" class="logo"></a>
+        </div>
+        <nav class="header-open">
+            <ul>
                 <li><a href="../pages/about.html">About</a></li>
                 <li><a href="../pages/occasions.html">Occasions</a></li>
                 <li><a href="../pages/flowers.html">Flowers</a></li>
                 <li><a href="../pages/plants.html">Plants</a></li>
-                <li><a href="../pages/events.html">Weddings/Events</a></li>
+                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
                 <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
-                <!-- Hide icons in hamburger menu, show when page expands -->
-                <li class="hide"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="hide"><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
-                <li class="hide"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
+            <a href="#" class="showNav">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </nav>
+        <nav class="hamburger-menu">
+            <ul>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/occasions.html">Occasions</a></li>
+                <li><a href="../pages/flowers.html">Flowers</a></li>
+                <li><a href="../pages/plants.html">Plants</a></li>
+                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
+                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li><a href="../pages/account.html">My Account</a></li>
+                <li><a href="../pages/cart.html">My Cart</a></li>
+            </ul>
+            <a href="#" class="closeNav">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </nav>
+        <input type="text" class="searchBar" placeholder="Search for anything!">
     </header>
 
     <main>
@@ -145,13 +166,13 @@
 
     </main>
 
-    <footer>
+     <footer>
         <section class="info">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms &amp; Conditions</a>
         </section>
         <section class="text">
-            <p>Copyright &copy 2023</p>
+            <p>Copyright &copy; 2023</p>
             <p>French Florist.</p>
             <p>All Rights Reserved.</p>
         </section>
@@ -162,7 +183,7 @@
             <a href="https://www.yelp.com/biz/french-florist-los-angeles"><i class="fa-brands fa-yelp"></i></a>
         </section>
         <section class="logoPlacement">
-            <img src="images/logo_white.jpg" class="logo" alt="logo">
+            <img src="../images/logo_white.jpg" class="logo" alt="logo">
         </section>
 
     </footer>

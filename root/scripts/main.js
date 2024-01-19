@@ -6,16 +6,26 @@ $(document).ready(function(){
 
 // Toggle NavBar
 $(document).ready(function(){
-  $(".header-open > a").click(function() {
-    $(".hamburger-menu").addClass("active");
+  $('.header-open > a').click(function() {
+    $('.hamburger-menu').addClass('active');
+    $('.showNav').hide();
   });
 
-  $(".closeNav").click(function() {
-    $(".hamburger-menu").removeClass("active");
+  $('.closeNav').click(function() {
+    $('.hamburger-menu').removeClass('active');
+    $('.showNav').show();
   });
 
 });
 
+// Search Bar
+
+$(function(){
+   $('#search').click(function() {
+       $('.searchBar').toggle()
+                      .focus();
+   });
+});
 
 
 
