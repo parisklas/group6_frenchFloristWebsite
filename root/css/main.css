@@ -18,6 +18,7 @@
     xx: Subscriptions page
     xx: My account page
     xx: Shopping cart page
+    xx: Search bar
     xx: Footer
     xx: Media queries
         16.1 tablet
@@ -47,47 +48,80 @@
     --bg-dark-pink: #fae9e8;
     --bg-btn-main: #8ea960;
     --bg-btn-alternate: #fffafb;
-}
+    --text: black;
+    
+
+
 /* Fonts - variables */
-:root {
+
     --heading-font: "Cormorant Garamond", serif;
     --body-font: "Khula", sans-serif;
     --btn-font: "Cormorant Garamond", serif;
+
+
+/* Typography - variables */
+
+    --fs-32: 32px;
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fs-12: 12px;
+    --fs-10: 10px;
+    
+    --fw-4: 400;
+    --fw-7: 700;
+   
 }
 
 /* Styling variables */
 :root {
     --border-radius: 6px;
+    --px: 24px;
 }
+
+
+
 
 /* ------------------------------------------------------
         GLOBAL STYLES
 -------------------------------------------------------*/
 
-html { font-size: 10px; }
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: var(--body-font, "Open Sans");
+    background-color: var(--bg-dark-pink);
 }
+
 h1 {
     font: 700 3.1rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
+    margin-top: var(--px);
 }
+
 h2 {
-    font: 700 2.8rem var(--heading-font);
+    font: 400 2.6rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
 }
+
 h3 {
     font: 700 2.5rem var(--heading-font);
     text-transform: uppercase;
     line-height: 1.5;
-    margin-left: 1em;
+    text-align: center;
 }
-h4 {
 
+
+h4 {
+    font: 400 2.5rem var(--heading-font);
+    line-height: 1.5;
 }
+
+
 p {
     font: 2rem var(--body-font);
     font-weight: 400;
@@ -95,11 +129,14 @@ p {
     line-height: 1.5;
     margin: 1em .5em;
 }
+
 img {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
+
 }
+
 a {
     text-decoration: none;
     color: black;
@@ -117,7 +154,10 @@ a {
     width: 25.7rem;
     height: 4rem;
     padding: 1rem 1.2rem;
+    border: none;
+    cursor: pointer;
     border-radius: var(--border-radius);
+
 }
 
 img.logo {
@@ -127,7 +167,8 @@ img.logo {
 }
 
 .current {
-    /* add "current page" styling here */
+    /*    background-color: #FAA094;*/
+    border: 3px dotted #FAA094;
 }
 
 .intro {
@@ -142,9 +183,28 @@ img.logo {
 -------------------------------------------------------*/
 
 header {
-    background: url(../images/backgroundSmall.jpg) repeat;
+    background: url(../images/cover-rose.jpeg) repeat;
+    background-size: cover;
     position: relative;
     height: 150px;
+}
+
+
+
+/*header::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted  paleness */
+   /* z-index: 1;
+}*/
+
+nav {
+    position: relative;
+    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 /* Hamburger Nav Bar */
@@ -153,17 +213,20 @@ nav ul {
 }
 
 .hamburger-menu {
-  display: none;
-  padding: 2em;
-  background-color: var(--bg-dark-pink);
+    display: none;
+    padding: 2em;
+    background-color: var(--bg-dark-pink);
 }
 
 .hamburger-menu ul li a {
-  background-color: var(--bg-light-pink);
-  text-align: center;
-  border-bottom: solid 1px #fae9e8;
-  display: block;
-  padding: .6em;
+    background-color: var(--bg-light-pink);
+    text-align: center;
+    border-bottom: solid 1px #fae9e8;
+}
+
+/* This is a decendent selector */
+nav li:first-child {
+    border-top: solid 1px #fae9e8; 
 }
 
 .showNav {
@@ -173,45 +236,71 @@ nav ul {
     top: 60px;
     right: 50px;
 }
+
 .closeNav {
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  color: black;
-  font-size: 30px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: black;
+    font-size: 30px;
 }
 
 /* Need to specify colors here : */
 a:link {
     color: black;
 }
-a:visited { }
+
 a:hover {
     cursor: pointer;
+    background-color: #455f45;
+    color: white;
+    padding: 7px;
+    border-radius: var(--border-radius);
 }
-a:active { }
+
+a:active {
+    background-color: #FAA094;
+}
 
 
 /* ------------------------------------------------------
         FOOTER
 -------------------------------------------------------*/
 footer {
-    background: url(../images/backgroundSmall.jpg) repeat;
+    background: url(../images/cover-rose.jpeg) repeat;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px 50px;
 }
+
+
+/*footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted  paleness */
+   /* z-index: 1;*/
+/*}*/
+
 
 footer p {
     font-size: 1.2rem;
     line-height: 0;
     margin: 0;
     padding: .6em;
+    
+    position: relative;
+    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 footer i {
     color: black;
+    position: relative;
+    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 .info {
@@ -243,9 +332,11 @@ footer i {
     grid-area: 1/ 3/ 3/ 4;
     justify-self: flex-end;
     align-self: flex-end;
+    position: relative;
+    z-index: 2; /* Made text visible on top of the background color image with roses*/
 }
 
-.logoPlacement .logo{
+.logoPlacement .logo {
     height: 80px;
     box-shadow: 5px 5px 4px var(--bg-dark-pink);
     margin: .5em 1.5em;
@@ -258,9 +349,11 @@ footer i {
 .homePage {
     background-color: var(--bg-dark-pink);
 }
+
 .title {
     height: 20%;
 }
+
 h1.fadeIn {
     color: var(--bg-btn-main);
     font-family: 'Parisienne';
@@ -268,13 +361,16 @@ h1.fadeIn {
     padding: 1em 0;
     display: none;
 }
+
 h1 span {
     font-family: 'Jacques Francois';
     text-shadow: -2px 2px 2px var(--bg-light-pink);
 }
+
 .hero h2 {
     margin-bottom: .4em;
 }
+
 .collections {
     background-color: var(--bg-light-pink);
     padding: 5rem 0;
@@ -284,9 +380,11 @@ h1 span {
     justify-content: center;
     gap: 1em;
 }
+
 .homePage h2 {
     width: 100%;
 }
+
 .collections figure {
     max-width: 45%;
     margin: .5em 0;
@@ -297,11 +395,15 @@ figcaption {
     font-size: 1.6rem;
     font-family: var(--heading-font);
 }
-.collections a.btn, .subs a.btn, .hero a.btn {
+
+.collections a.btn,
+.subs a.btn,
+.hero a.btn {
     margin-top: 2em;
 }
 
-.subs article, .hero article {
+.subs article,
+.hero article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,6 +426,7 @@ figcaption {
     padding: 0 0 3em 0;
     width: 100%;
 }
+
 p#name {
     font-weight: 700;
     padding: 1em 0 0 1em;
@@ -340,12 +443,9 @@ p#name {
     border-radius: .6rem;
 }
 
-.showcase {
-
-}
+.showcase {}
 
 .container {
-    background-color: var(--bg-light-pink);
     width: 80%;
     margin: auto;
     border-radius: 6px;
@@ -368,6 +468,7 @@ p#name {
     flex-direction: column;
     align-items: center;
 }
+
 .order p {
     padding: 0 0 0 1em;
     margin: 0;
@@ -383,7 +484,8 @@ p#name {
         SUBSCRIPTION PAGE CONTENT
 -------------------------------------------------------*/
 
-#subIntro, #subHow {
+#subIntro,
+#subHow {
     background-color: var(--bg-dark-pink);
     padding: 4em 2.5em;
     display: flex;
@@ -391,9 +493,19 @@ p#name {
     align-items: center;
 }
 
+#subIntro a.btn,
+#subHow a.btn {
+    margin-top: 2em;
+}
+
 #subOptions {
     background-color: var(--bg-light-pink);
     padding: 4em 1em;
+}
+
+#subOptions h3 {
+    text-decoration: underline;
+    text-decoration-color: var(--bg-dark-pink);
 }
 
 /* ------------------------------------------------------
@@ -406,7 +518,22 @@ p#name {
     padding: 5rem 2rem;
 }
 
-
+.mapWrapper {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.mappWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+}
 
 /* ------------------------------------------------------
         EVENT PAGE CONTENT
@@ -472,50 +599,336 @@ p#name {
 
 
 
+
+/* ------------------------------------------------------
+        SEARCH BAR
+-------------------------------------------------------*/
+
+.searchBar {
+    font: 1.6rem var(--body-font);
+    position: absolute;
+    right: 60px;
+    top: 110px;
+    height: 18px;
+    width: 200px;
+    margin-right: 6px;
+    padding: .4em 1em;
+    border-radius: var(border-radius);
+    display: none;
+}
+
+
+
+
+/* ------------------------------------------------------
+        SHOPPING CART PAGE CONTENT
+-------------------------------------------------------*/
+ /* main container */
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+    border-bottom: 1px solid var(--bg-btn-main);
+    padding: 20px var(--px);
+}
+
+main h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* cart section style */
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: var(--px);
+}
+.cart-item-box {
+    padding: 0 20px var(--px);
+}
+
+.product-card { 
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.product-img { 
+    margin-right: 4rem;
+    width: 150px;
+    border-radius: var(--radius);
+}
+
+.detail  {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    gap: 10px;
+}
+
+.price {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.product-qty button {
+    background: var(--bg-btn-alternate);
+    border-radius: var(--radius);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.product-close-btn {
+    background: var(--bg-btn-alternate);
+    color: red;  
+    border-radius: var(--radius);
+}
+
+.product-close-btn ion-icon {
+    font-size: 20px;  
+}
+
+.product-close-btn:hover ion-icon { color: black;}
+
+.wrapper {
+    padding: 20px var(--px);
+    border-top: 1px solid var(--bg-btn-main);
+    border-bottom: 1px solid var(--bg-btn-main);
+}
+
+.wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-default {
+    padding: 12px 40px;
+    width: 100%;
+    font-weight: var(--fw-7);
+    letter-spacing: 2px;
+}
+
+.btn-outline {
+    background: var(--bg-btn-alternate);
+    padding: 10px 25px;
+    border: 1px solid black;
+    color: var(--bg-text);
+}
+
+.btn-outline:hover {
+    background: var(--bg-btn-main);
+    color: var(--bg-text);
+}
+
+.amount > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount > div:not(:last-child) {margin-bottom: 10px;}
+
+.amount .total {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-7);
+    color: brown;
+}
+
+
+ /* checkout section style */
+.checkout {
+   /* width: 70%;*/
+    padding: 25px var(--px);
+    /*border-top: 1px solid var(--bg-btn-main);*/
+}
+
+.section-heading {
+    color: var(--bg-text);
+    margin-bottom: 30px;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-4);
+}
+
+.payment-form { margin-bottom: 40px;}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*align-items: center;
+    gap: 30px;*/
+    margin-bottom: 30px;
+}
+
+.payment-method .method {
+    border: 1px solid var(--bg-text);
+    border-radius: var(--radius);
+   
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .selected { border-color: var(--bg-btn-main);}
+
+.payment-method .method ion-icon {font-size: 30px;}
+
+.payment-method .method .checkmark {
+    margin-left: auto;
+    color: var(--bg-text);
+}
+
+.payment-method .method .fill { color: var(--bg-btn-main);}
+
+.label-default {
+    display: flex;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: var(--fs-16);
+    color: var(--bg-text);  
+}
+
+.input-default {
+    background: var(--bg-light-pink);
+    border-radius: var(--radius);
+    color: var(--bg-text);
+    margin-bottom: 15px;
+}
+
+.payment-form input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-4);
+}
+
+/*.cardholder-name,
+.card-number {margin-bottom: 20px;}*/
+
+/*.card-number input,
+.cvv input { letter-spacing: 3px;}*/
+
+/*.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}*/
+
+.input-flex .expire-date,
+.input-flex .cvv { width: 100%;}
+
+.expire-date .input-flex {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    font-size: var(--fs-20);
+    color: var(--bg-text);
+    gap: 10px; 
+}
+
+/*.expire-date .input-flex input { /*text-align: center;*/ /*flex-direction: row;}*/
+
+.btn { border-radius: var(--radius); }
+ 
+.btn:active { transform: scale(1.1);}
+
+.btn:focus {
+    color: var(--bg-text);
+    background: var(--bg-btn-alternate);
+    outline: 2px solid var(--bg-btn-alternate);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--bg-btn-main);
+    font-weight: var(--fw-7);
+    color: var(--bg-text);
+    padding: 1rem 1.2rem;
+    width: 100%;
+}
+
+.btn-primary b {margin-right: 10px;}
+
+ 
+
 /* ------------------------------------------------------
         MEDIA QUERIES
 -------------------------------------------------------*/
 
 /* FOR HAMBURGER MENU AT MOBILE VIEW */
 @media screen and (max-width: 700px) {
-  .header-open ul {
-      display: none;
-  }
+    .header-open ul {
+        display: none;
+    }
+
     /* > is a child selector that selects DIRECT child elements of a specified parent*/
-  .header-open > a {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    color: black;
-    font-size: 30px;
-  }
-  .hamburger-menu.active {
-      display: block;
-  }
+    .header-open > a {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: black;
+        font-size: 30px;
+    }
+
+    .hamburger-menu.active {
+        display: block;
+    }
+
+    a:hover {
+        cursor: pointer;
+        background-color: #455f45;
+        color: white;
+    }
 }
 
 
 
 
 @media only screen and (min-width: 700px) {
-/* NAV BAR AT FULL SCREEN */
- .header-open {
-    width: 90%;
-}
-header {
-    display: flex;
-    align-items: flex-end;
-}
-.header-open ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-.header-open ul li {
-    line-height: .8em;
-    padding: 8px 0;
-}
-.showNav {
-    display: none;
-}
+
+    /* NAV BAR AT FULL SCREEN */
+    .header-open {
+        width: 90%;
+    }
+
+    header {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .header-open ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .header-open ul li {
+        line-height: .8em;
+        padding: 8px 4px;
+    }
+
+    .showNav {
+        display: none;
+    }
 }
