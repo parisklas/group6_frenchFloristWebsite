@@ -47,13 +47,69 @@
     --bg-dark-pink: #fae9e8;
     --bg-btn-main: #8ea960;
     --bg-btn-alternate: #fffafb;
-}
+    --bg-text: black;
+    
+
 /* Fonts - variables */
-:root {
+
     --heading-font: "Cormorant Garamond", serif;
     --body-font: "Khula", sans-serif;
     --btn-font: "Cormorant Garamond", serif;
+
+
+/* Typography - variables */
+
+    --fs-32: 32px;
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fs-12: 12px;
+    --fs-10: 10px;
+    
+    --fw-4: 400;
+    --fw-7: 700;
+
+/* Others - variables */
+    --px: 24px;
+    --radius: 6px;
+    
 }
+
+/* ------------------------------------------------------
+        RESET
+-------------------------------------------------------*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ion-icon, span {display: inline-block;}
+lable, img {display: block;}
+input{
+    font: inherit;
+    border: none;
+}
+
+input:focus { outline: 2px solid var(--bg-light-pink);}
+
+/* Remove number input up & down button */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance:         none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Custom scrollbar style */
+::-webkit-scrollbar {width: 8px;}
+::-webkit-scrollbar-track {background: transparent;}
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{ background: hsl(0, 0%, 70%)} 
+
 
 /* ------------------------------------------------------
         GLOBAL STYLES
@@ -62,14 +118,16 @@
 html { font-size: 10px; }
 body {
     font-family: var(--body-font, "Open Sans");
+    background-color: var(--bg-dark-pink);
 }
 h1 {
     font: 700 3.3rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
+    margin-top: var(--px);
 }
 h2 {
-    font: 700 3.2rem var(--heading-font);
+    font: 400 2.6rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
@@ -80,6 +138,13 @@ h3 {
     line-height: 1.5;
     margin-left: 1em;
 }
+
+h4 {
+    font: 400 2.5rem var(--heading-font);
+    line-height: 1.5;
+   
+}
+
 p {
     font: 2rem var(--body-font);
     font-weight: 400;
@@ -90,7 +155,7 @@ p {
 img {
     max-width: 100%;
     height: auto;
-    margin: 1.5em;
+   
 }
 a {
     text-decoration: none;
@@ -108,7 +173,9 @@ a {
     width: 25.7rem;
     height: 4rem;
     padding: 1rem 1.2rem;
-    border-radius: .6rem;
+    border-radius: var( --radius);
+    border: none;
+    cursor: pointer;
 }
 
 img.logo {
@@ -127,9 +194,27 @@ img.logo {
 -------------------------------------------------------*/
 
 header {
-    background: url(../images/backgroundSmall.jpg) no-repeat;
+    background: url(../images/cover-rose.jpeg) repeat;
+    background-size: cover;
     position: relative;
     height: 100px;
+}
+
+
+header::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted  paleness */
+    z-index: 1;
+}
+
+nav {
+    position: relative;
+    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 /* toggle navigation */
@@ -149,7 +234,7 @@ nav li {
 
 /* This is a decendent selector */
 nav li:first-child {
-    border-top: solid 1px #fae9e8;
+    border-top: solid 1px #fae9e8; 
 }
 
 nav a {
@@ -188,21 +273,43 @@ a:active { }
         FOOTER
 -------------------------------------------------------*/
 footer {
-    background: url(../images/backgroundSmall.jpg) no-repeat;
+  background: url(../images/cover-rose.jpeg) repeat;
+    background-size: cover;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 30px 50px;
+    
+    position: relative;
+    height: 100px;
 }
+
+
+footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted  paleness */
+    z-index: 1;
+}
+
 
 footer p {
     font-size: 1rem;
     line-height: 0;
     margin: 0;
     padding: .6em;
+    
+    position: relative;
+    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 footer i {
     color: black;
+    position: relative;
+    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 .info {
@@ -213,6 +320,8 @@ footer i {
 }
 .info a {
     padding: 0 10px;
+    position: relative;
+    z-index: 2; /* Made text visible on top of the background color image with roses*/
 }
 
 .text {
@@ -233,10 +342,13 @@ footer i {
     grid-area: 1/ 3/ 3/ 4;
     justify-self: flex-end;
     align-self: flex-end;
+    position: relative;
+    z-index: 2; /* Made text visible on top of the background color image with roses*/
 }
 .logoPlacement .logo{
     height: 65px;
     margin-right: 1.5em;
+   
 }
 
 /* ------------------------------------------------------
@@ -283,7 +395,6 @@ p#name {
 }
 
 .container {
-    background-color: var(--bg-light-pink);
     width: 80%;
     margin: auto;
     border-radius: 6px;
@@ -332,6 +443,258 @@ p#name {
     padding: 4em 1em;
 }
 
+
+/* ------------------------------------------------------
+        SHOPPING CART PAGE CONTENT
+-------------------------------------------------------*/
+ /* main container */
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+    border-bottom: 1px solid var(--bg-btn-main);
+    padding: 20px var(--px);
+}
+
+main h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* cart section style */
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: var(--px);
+}
+.cart-item-box {
+    padding: 0 20px var(--px);
+}
+
+.product-card { 
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.product-img { 
+    margin-right: 4rem;
+    width: 150px;
+    border-radius: var(--radius);
+}
+
+.detail  {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    gap: 10px;
+}
+
+.price {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.product-qty button {
+    background: var(--bg-btn-alternate);
+    border-radius: var(--radius);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.product-close-btn {
+    background: var(--bg-btn-alternate);
+    color: red;  
+    border-radius: var(--radius);
+}
+
+.product-close-btn ion-icon {
+    font-size: 20px;  
+}
+
+.product-close-btn:hover ion-icon { color: black;}
+
+.wrapper {
+    padding: 20px var(--px);
+    border-top: 1px solid var(--bg-btn-main);
+    border-bottom: 1px solid var(--bg-btn-main);
+}
+
+.wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-default {
+    padding: 12px 40px;
+    width: 100%;
+    font-weight: var(--fw-7);
+    letter-spacing: 2px;
+}
+
+.btn-outline {
+    background: var(--bg-btn-alternate);
+    padding: 10px 25px;
+    border: 1px solid black;
+    color: var(--bg-text);
+}
+
+.btn-outline:hover {
+    background: var(--bg-btn-main);
+    color: var(--bg-text);
+}
+
+.amount > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount > div:not(:last-child) {margin-bottom: 10px;}
+
+.amount .total {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-7);
+    color: brown;
+}
+
+
+ /* checkout section style */
+.checkout {
+   /* width: 70%;*/
+    padding: 25px var(--px);
+    /*border-top: 1px solid var(--bg-btn-main);*/
+}
+
+.section-heading {
+    color: var(--bg-text);
+    margin-bottom: 30px;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-4);
+}
+
+.payment-form { margin-bottom: 40px;}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*align-items: center;
+    gap: 30px;*/
+    margin-bottom: 30px;
+}
+
+.payment-method .method {
+    border: 1px solid var(--bg-text);
+    border-radius: var(--radius);
+   
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .selected { border-color: var(--bg-btn-main);}
+
+.payment-method .method ion-icon {font-size: 30px;}
+
+.payment-method .method .checkmark {
+    margin-left: auto;
+    color: var(--bg-text);
+}
+
+.payment-method .method .fill { color: var(--bg-btn-main);}
+
+.label-default {
+    display: flex;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: var(--fs-16);
+    color: var(--bg-text);  
+}
+
+.input-default {
+    background: var(--bg-light-pink);
+    border-radius: var(--radius);
+    color: var(--bg-text);
+    margin-bottom: 15px;
+}
+
+.payment-form input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-4);
+}
+
+/*.cardholder-name,
+.card-number {margin-bottom: 20px;}*/
+
+/*.card-number input,
+.cvv input { letter-spacing: 3px;}*/
+
+/*.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}*/
+
+.input-flex .expire-date,
+.input-flex .cvv { width: 100%;}
+
+.expire-date .input-flex {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    font-size: var(--fs-20);
+    color: var(--bg-text);
+    gap: 10px; 
+}
+
+/*.expire-date .input-flex input { /*text-align: center;*/ /*flex-direction: row;}*/
+
+.btn { border-radius: var(--radius); }
+ 
+.btn:active { transform: scale(1.1);}
+
+.btn:focus {
+    color: var(--bg-text);
+    background: var(--bg-btn-alternate);
+    outline: 2px solid var(--bg-btn-alternate);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--bg-btn-main);
+    font-weight: var(--fw-7);
+    color: var(--bg-text);
+    padding: 1rem 1.2rem;
+    width: 100%;
+}
+
+.btn-primary b {margin-right: 10px;}
+
+ 
 
 /* ------------------------------------------------------
         MEDIA QUERIES
