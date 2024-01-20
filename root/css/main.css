@@ -412,6 +412,64 @@ p#name {
         EVENT PAGE CONTENT
 -------------------------------------------------------*/
 
+/* ------------------------------------------------------
+        FLOWERS PAGE CONTENT
+-------------------------------------------------------*/
+
+/*.flowersPage { }  IF NEEDED*/
+
+.flowersPage {
+    height: 10%;
+    background-color: var(--bg-dark-pink);
+}
+
+/*
+.flowersPage h2 {
+    margin-top: 2em;
+    color: var(--bg-btn-main);
+    font-family: 'Jacques Francois';
+    text-transform: none;
+    padding: 1em 0;
+    margin: 0;
+    display: none;
+    text-shadow: -2px 2px 2px var(--bg-light-pink);
+}
+*/
+
+.flowersPage h2 {
+    text-align: center;
+    
+}
+
+.flowersPage section {
+      display: flex;
+      flex-direction: row; /* Updated for responsiveness */
+      justify-content: space-between;
+      padding: 20px;
+      background-color: var(--bg-dark-pink); /* Added background color */
+}
+
+
+.flowersPage article {
+      flex: 1;
+      max-width: 30%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin: 0 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+}
+
+.flowersPage img {
+      max-width: 100%;
+      height: auto;
+}
+
+.flowersPage .btn {
+    align-content: center
+}
+
 
 
 /* ------------------------------------------------------
