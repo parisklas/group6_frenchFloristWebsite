@@ -619,51 +619,248 @@ form input#submit {
     background-color: var(--bg-dark-pink);
 }
 
-/*
-.flowersPage h2 {
-    margin-top: 2em;
-    color: var(--bg-btn-main);
-    font-family: 'Jacques Francois';
-    text-transform: none;
-    padding: 1em 0;
-    margin: 0;
-    display: none;
-    text-shadow: -2px 2px 2px var(--bg-light-pink);
-}
-*/
 
 .flowersPage h2 {
+    margin: 50 0 30 0;
     text-align: center;
-    
+    width: 100%;
 }
 
-.flowersPage section {
-      display: flex;
-      flex-direction: row; /* Updated for responsiveness */
-      justify-content: space-between;
-      padding: 20px;
-      background-color: var(--bg-dark-pink); /* Added background color */
+.fpCollections {
+    background-color: var(--bg-dark-pink); 
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 3rem;
+}
+
+.tropical {
+     border-radius: 6px;
+}
+
+.tropical figure {
+    border-radius: 6px;
+    margin: 20px;
 }
 
 
-.flowersPage article {
-      flex: 1;
-      max-width: 30%;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      margin: 0 10px;
-      padding: 10px;
-      box-sizing: border-box;
-      text-align: center;
+.fpCollections article {
+    background: var(--bg-light-pink);
+    vertical-align: top;
+    margin: 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
 }
-
-.flowersPage img {
-      max-width: 100%;
-      height: auto;
-}
-
 .flowersPage .btn {
-    align-content: center
+    display: grid;
+    margin: 3em auto; 
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--bg-btn-main);
+    border-radius: 5px;
+    color: var(--text);
+    place-items: center;
+}
+
+.fpBuild {
+    background-color: var(--bg-light-pink); 
+    text-align: center;
+/*    max-width: 800px;*/
+    margin: 0 auto;
+}  
+
+.fpBuild h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.fpBuild img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    float: right; 
+    margin-right: 20px; 
+    margin-left: 20px
+}
+
+.fpBuild p {
+    text-align: left;
+    flex: 1;
+}
+
+.fpBuild article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fpSales {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;  
+}
+
+.fpSales article {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.fpSales figure {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    flex: 0 1 calc(20%)
+}
+
+.fpSales img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fpSales figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(113, 121, 126, 0.7);
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------------------------------------
+        PLANTS PAGE CONTENT
+-------------------------------------------------------*/
+
+/*.flowersPage { }  IF NEEDED*/
+
+.plantsPage {
+    height: 10%;
+    background-color: var(--bg-dark-pink);
+}
+
+
+.plantsPage h2 {
+    margin: 50 0 30 0;
+    text-align: center;
+    width: 100%;
+}
+
+.ppCollections {
+    background-color: var(--bg-dark-pink); 
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 3rem;
+}
+
+.orchids {
+     border-radius: 6px;
+}
+
+.orchids figure {
+    border-radius: 6px;
+    margin: 20px;
+}
+
+
+.ppCollections article {
+    background: var(--bg-light-pink);
+    vertical-align: top;
+    margin: 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.plantsPage .btn {
+    display: grid;
+    margin: 3em auto; 
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--bg-btn-main);
+    border-radius: 5px;
+    color: var(--text);
+    place-items: center;
+}
+
+.ppCare {
+    background-color: var(--bg-light-pink); 
+    text-align: center;
+/*    max-width: 800px;*/
+    margin: 0 auto;
+}  
+
+.ppCare h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.ppCare img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    float: right; 
+    margin-right: 20px; 
+    margin-left: 20px
+}
+
+.ppCare p {
+    text-align: left;
+    flex: 1;
+}
+
+.ppCare article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ppHypo {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;  
+}
+
+.ppHypo article {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ppHypo figure {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    flex: 0 1 calc(20%)
+}
+
+.ppHypo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ppHypo figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(113, 121, 126, 0.7);
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
 }
 
 
