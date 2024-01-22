@@ -49,7 +49,7 @@
     --bg-btn-main: #8ea960;
     --bg-btn-alternate: #fffafb;
     --text: black;
-    
+
 /* Fonts - variables */
 
     --heading-font: "Cormorant Garamond", serif;
@@ -63,14 +63,14 @@
     --fs-16: 16px;
     --fs-12: 12px;
     --fs-10: 10px;
-    
+
     --fw-4: 400;
     --fw-7: 700;
 
 /* Styling variables */
     --border-radius: 6px;
     --px: 24px;
-    
+
 }
 
 
@@ -86,8 +86,6 @@ html {
 
 body {
     font-family: var(--body-font, "Open Sans");
-/*     I don't think we should put this on body ... but rather on the <main> for each page */
-/*    background-color: var(--bg-dark-pink);*/
 }
 
 h1 {
@@ -113,7 +111,7 @@ h3 {
 
 
 h4 {
-    font: 400 2.5rem var(--heading-font);
+    font: 400 2.8rem var(--heading-font);
     line-height: 1.5;
 }
 
@@ -475,7 +473,7 @@ p#name {
 form {
     font-size: 1.6em;
     text-align: left;
-    margin: auto;    
+    margin: auto;
 }
 
 form h5, form label {
@@ -539,7 +537,7 @@ textarea {
     margin-bottom: 20px;
 }
 .form2 select option {
-    font: 1.2em var(--body-font); 
+    font: 1.2em var(--body-font);
 }
 
 /* customize accent color for checkbox and radio inputs */
@@ -592,7 +590,7 @@ form input#submit {
     padding-bottom: 56%;
     height: 0;
     overflow: hidden;
-    
+
 }
 .mappWrapper iframe {
     position: absolute;
@@ -600,14 +598,17 @@ form input#submit {
     left: 0;
     width: 100%;
     height: 100%;
-    
-    
+
+
 }
 
 /* ------------------------------------------------------
         EVENT PAGE CONTENT
 -------------------------------------------------------*/
-
+.events {
+    text-align: center;
+    padding: 5rem 2rem;
+}
 /* ------------------------------------------------------
         FLOWERS PAGE CONTENT
 -------------------------------------------------------*/
@@ -619,51 +620,248 @@ form input#submit {
     background-color: var(--bg-dark-pink);
 }
 
-/*
-.flowersPage h2 {
-    margin-top: 2em;
-    color: var(--bg-btn-main);
-    font-family: 'Jacques Francois';
-    text-transform: none;
-    padding: 1em 0;
-    margin: 0;
-    display: none;
-    text-shadow: -2px 2px 2px var(--bg-light-pink);
-}
-*/
 
 .flowersPage h2 {
+    margin: 50 0 30 0;
     text-align: center;
-    
+    width: 100%;
 }
 
-.flowersPage section {
-      display: flex;
-      flex-direction: row; /* Updated for responsiveness */
-      justify-content: space-between;
-      padding: 20px;
-      background-color: var(--bg-dark-pink); /* Added background color */
+.fpCollections {
+    background-color: var(--bg-dark-pink);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 3rem;
+}
+
+.tropical {
+     border-radius: 6px;
+}
+
+.tropical figure {
+    border-radius: 6px;
+    margin: 20px;
 }
 
 
-.flowersPage article {
-      flex: 1;
-      max-width: 30%;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      margin: 0 10px;
-      padding: 10px;
-      box-sizing: border-box;
-      text-align: center;
+.fpCollections article {
+    background: var(--bg-light-pink);
+    vertical-align: top;
+    margin: 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
 }
-
-.flowersPage img {
-      max-width: 100%;
-      height: auto;
-}
-
 .flowersPage .btn {
-    align-content: center
+    display: grid;
+    margin: 3em auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--bg-btn-main);
+    border-radius: 5px;
+    color: var(--text);
+    place-items: center;
+}
+
+.fpBuild {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+/*    max-width: 800px;*/
+    margin: 0 auto;
+}
+
+.fpBuild h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.fpBuild img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px
+}
+
+.fpBuild p {
+    text-align: left;
+    flex: 1;
+}
+
+.fpBuild article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fpSales {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fpSales article {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.fpSales figure {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    flex: 0 1 calc(20%)
+}
+
+.fpSales img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fpSales figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(113, 121, 126, 0.7);
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------------------------------------
+        PLANTS PAGE CONTENT
+-------------------------------------------------------*/
+
+/*.flowersPage { }  IF NEEDED*/
+
+.plantsPage {
+    height: 10%;
+    background-color: var(--bg-dark-pink);
+}
+
+
+.plantsPage h2 {
+    margin: 50 0 30 0;
+    text-align: center;
+    width: 100%;
+}
+
+.ppCollections {
+    background-color: var(--bg-dark-pink);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 3rem;
+}
+
+.orchids {
+     border-radius: 6px;
+}
+
+.orchids figure {
+    border-radius: 6px;
+    margin: 20px;
+}
+
+
+.ppCollections article {
+    background: var(--bg-light-pink);
+    vertical-align: top;
+    margin: 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.plantsPage .btn {
+    display: grid;
+    margin: 3em auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--bg-btn-main);
+    border-radius: 5px;
+    color: var(--text);
+    place-items: center;
+}
+
+.ppCare {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+/*    max-width: 800px;*/
+    margin: 0 auto;
+}
+
+.ppCare h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.ppCare img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px
+}
+
+.ppCare p {
+    text-align: left;
+    flex: 1;
+}
+
+.ppCare article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ppHypo {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ppHypo article {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ppHypo figure {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    flex: 0 1 calc(20%)
+}
+
+.ppHypo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ppHypo figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(113, 121, 126, 0.7);
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
 }
 
 
@@ -682,7 +880,7 @@ form input#submit {
     width: 200px;
     margin-right: 6px;
     padding: .4em 1em;
-    border-radius: var(border-radius);
+    border-radius: var(--border-radius);
     display: none;
 }
 
@@ -695,7 +893,6 @@ form input#submit {
  /* main container */
 main {
     max-width: 1440px;
-    min-height: 100vh;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -709,6 +906,10 @@ main h1 {
 
 main h2 {
     margin-bottom: 1.5rem;
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-4);
 }
 
 /* cart section style */
@@ -716,22 +917,22 @@ main h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-top: var(--px);
+    padding: 0;
+
 }
 .cart-item-box {
-    padding: 0 20px var(--px);
+    padding: 20px var(--px);
 }
 
-.product-card { 
+.product-card {
     display: flex;
     margin-bottom: 20px;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-evenly;
+    gap: 20px;
 }
 
-.product-img { 
-    margin-right: 4rem;
+.product-img {
     width: 150px;
     border-radius: var(--border-radius);
 }
@@ -740,6 +941,7 @@ main h2 {
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
+
     gap: 10px;
 }
 
@@ -753,31 +955,34 @@ main h2 {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+    font-size: 18px;
 }
 
 .product-qty button {
     background: var(--bg-btn-alternate);
     border-radius: var(--border-radius);
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .product-close-btn {
+    display: flex;
     background: var(--bg-btn-alternate);
-    color: red;  
+    color: red;
     border-radius: var(--border-radius);
 }
 
 .product-close-btn ion-icon {
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 .product-close-btn:hover ion-icon { color: black;}
 
 .wrapper {
+    font-size: var(--fs-16);
     padding: 20px var(--px);
     border-top: 1px solid var(--bg-btn-main);
     border-bottom: 1px solid var(--bg-btn-main);
@@ -789,23 +994,28 @@ main h2 {
     gap: 10px;
 }
 
-.input-default {
-    padding: 12px 40px;
+.input-discount {
+    padding: 10px 40px;
     width: 100%;
     font-weight: var(--fw-7);
     letter-spacing: 2px;
+    background: var(--bg-light-pink);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    margin-bottom: 15px;
+
 }
 
 .btn-outline {
     background: var(--bg-btn-alternate);
     padding: 10px 25px;
     border: 1px solid black;
-    color: var(--bg-text);
+    color: var(--text);
 }
 
 .btn-outline:hover {
     background: var(--bg-btn-main);
-    color: var(--bg-text);
+    color: var(--text);
 }
 
 .amount > div {
@@ -818,43 +1028,60 @@ main h2 {
 .amount .total {
     font-size: var(--fs-20);
     font-weight: var(--fw-7);
-    color: brown;
+    color: var(--bg-btn-main);
 }
 
 
  /* checkout section style */
 .checkout {
-   /* width: 70%;*/
-    padding: 25px var(--px);
-    /*border-top: 1px solid var(--bg-btn-main);*/
+    padding: 20px var(--px);
 }
 
-.section-heading {
-    color: var(--bg-text);
-    margin-bottom: 30px;
-    font-size: var(--fs-20);
-    font-weight: var(--fw-4);
-}
-
-.payment-form { margin-bottom: 40px;}
-
-.payment-method {
+.payment-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /*align-items: center;
-    gap: 30px;*/
-    margin-bottom: 30px;
+
+    margin-bottom: 40px;}
+
+.payment-method button {
+    width: 100%;
+}
+
+.cardholder-name,
+.card-number,
+.cvv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.expire-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.expire-date input {
+    margin-right: 5px;
+}
+
+#expire-date-day,
+#expire-date-month{
+    width: 50%;
+}
+
+.input-flex {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .payment-method .method {
-    border: 1px solid var(--bg-text);
-    border-radius: var(--radius);
-   
     display: flex;
     align-items: center;
     padding: 15px 30px;
     margin-bottom: 15px;
+    border: 1px solid var(--text);
+    border-radius: var(--border-radius);
     gap: 20px;
     cursor: pointer;
 }
@@ -865,7 +1092,7 @@ main h2 {
 
 .payment-method .method .checkmark {
     margin-left: auto;
-    color: var(--bg-text);
+    color: var(--text);
 }
 
 .payment-method .method .fill { color: var(--bg-btn-main);}
@@ -875,57 +1102,17 @@ main h2 {
     padding-left: 10px;
     margin-bottom: 5px;
     font-size: var(--fs-16);
-    color: var(--bg-text);  
+    color: var(--text);
 }
 
 .input-default {
     background: var(--bg-light-pink);
-    border-radius: var(--radius);
-    color: var(--bg-text);
+    border-radius: var(--border-radius);
+    color: var(--text);
     margin-bottom: 15px;
-}
-
-.payment-form input{
-    width: 100%;
     padding: 10px 15px;
     font-size: var(--fs-16);
     font-weight: var(--fw-4);
-}
-
-/*.cardholder-name,
-.card-number {margin-bottom: 20px;}*/
-
-/*.card-number input,
-.cvv input { letter-spacing: 3px;}*/
-
-/*.input-flex {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}*/
-
-.input-flex .expire-date,
-.input-flex .cvv { width: 100%;}
-
-.expire-date .input-flex {
-    display: flex;
-    align-items: baseline;
-    width: 100%;
-    font-size: var(--fs-20);
-    color: var(--bg-text);
-    gap: 10px; 
-}
-
-/*.expire-date .input-flex input { /*text-align: center;*/ /*flex-direction: row;}*/
-
- 
-.btn:active { transform: scale(1.1);}
-
-.btn:focus {
-    color: var(--bg-text);
-    background: var(--bg-btn-alternate);
-    outline: 2px solid var(--bg-btn-alternate);
-    outline-offset: 2px;
 }
 
 .btn-primary {
@@ -935,10 +1122,16 @@ main h2 {
     padding: 1rem 1.2rem;
     width: 100%;
 }
+.btn-primary:active { transform: scale(1.1);}
 
-.btn-primary b {margin-right: 10px;}
+.btn-primary:focus {
+    color: var(--text);
+    background: var(--bg-btn-alternate);
+    outline: 2px solid var(--bg-btn-alternate);
+    outline-offset: 2px;
+}
 
- 
+
 
 /* ------------------------------------------------------
         MEDIA QUERIES
@@ -1000,3 +1193,124 @@ main h2 {
         display: none;
     }
 }
+
+/* FOR EVENTS PAGE */
+@media screen and (min-width: 700px) {
+.events img {
+    width: 350px;
+    height: 100%;
+}
+.events p {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 3rem;
+
+}
+
+.events-flex {
+    display: flex;
+    margin: 2rem;
+}
+
+.events-block {
+    display: flex;
+    flex-direction: column;
+}
+
+
+}
+
+.events-block .btn {
+    margin: 3rem;
+    }
+
+}
+
+
+
+
+
+/* FOR SHOPPING CART */
+
+@media screen and (min-width: 700px){
+ .product-img {
+    width: 350px;
+}
+    h4 {
+    font: 400 4rem var(--heading-font);
+    line-height: 2;
+}
+
+}
+    @media screen and (min-width: 1060px){
+.cart {
+    display: flex;
+    flex-direction: row;
+}
+.product-img {
+    width: 220px;
+}
+.amount {
+    margin-top: 40px;
+}
+
+.wrapper {
+    font-size: var(--fs-20);
+    padding: 30px var(--px);
+    border-top: none;
+    border-left: 1px solid var(--bg-btn-main);
+    border-bottom: none;
+}
+.checkout {
+    border-top:1px solid var(--bg-btn-main);
+}
+
+.label-default {
+    font-size: var(--fs-20);
+}
+
+.payment-method {
+    display: flex;
+    gap: 20px;
+}
+
+.expiration {
+    display: flex;
+    gap: 20px;
+
+}
+
+.cardholder-name,
+.card-number,
+.expire-date,
+.cvv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+.product-img {
+    width: 300px;
+}
+
+}
+
+@media screen and (min-width: 1400px){
+.product-img {
+    width: 450px;
+}
+
+}
+
+
+
+
+
+
+
+
+
