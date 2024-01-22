@@ -117,7 +117,7 @@ h3 {
 
 
 h4 {
-    font: 400 2.5rem var(--heading-font);
+    font: 400 2.8rem var(--heading-font);
     line-height: 1.5;
 }
 
@@ -538,7 +538,10 @@ p#name {
 /* ------------------------------------------------------
         EVENT PAGE CONTENT
 -------------------------------------------------------*/
-
+.events {
+    text-align: center;
+    padding: 5rem 2rem;
+}
 
 
 
@@ -555,7 +558,7 @@ p#name {
     width: 200px;
     margin-right: 6px;
     padding: .4em 1em;
-    border-radius: var(border-radius);
+    border-radius: var(--border-radius);
     display: none;
 }
 
@@ -568,7 +571,6 @@ p#name {
  /* main container */
 main {
     max-width: 1440px;
-    min-height: 100vh;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -582,6 +584,10 @@ main h1 {
 
 main h2 {
     margin-bottom: 1.5rem;
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-4);
 }
 
 /* cart section style */
@@ -589,10 +595,11 @@ main h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-top: var(--px);
+    padding: 0;
+    
 }
 .cart-item-box {
-    padding: 0 20px var(--px);
+    padding: 20px var(--px);
 }
 
 .product-card { 
@@ -600,19 +607,19 @@ main h2 {
     margin-bottom: 20px;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .product-img { 
-    margin-right: 4rem;
     width: 150px;
-    border-radius: var(--radius);
+    border-radius: var(--border-radius);
 }
 
 .detail  {
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
+    
     gap: 10px;
 }
 
@@ -626,22 +633,24 @@ main h2 {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+    font-size: 18px;
 }
 
 .product-qty button {
     background: var(--bg-btn-alternate);
-    border-radius: var(--radius);
-    width: 30px;
-    height: 30px;
+    border-radius: var(--border-radius);
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
 } 
 
 .product-close-btn {
+    display: flex;
     background: var(--bg-btn-alternate);
     color: red;  
-    border-radius: var(--radius);
+    border-radius: var(--border-radius);
 }
 
 .product-close-btn ion-icon {
@@ -651,6 +660,7 @@ main h2 {
 .product-close-btn:hover ion-icon { color: black;}
 
 .wrapper {
+    font-size: var(--fs-16);
     padding: 20px var(--px);
     border-top: 1px solid var(--bg-btn-main);
     border-bottom: 1px solid var(--bg-btn-main);
@@ -662,23 +672,28 @@ main h2 {
     gap: 10px;
 }
 
-.input-default {
-    padding: 12px 40px;
+.input-discount {
+    padding: 10px 40px;
     width: 100%;
     font-weight: var(--fw-7);
     letter-spacing: 2px;
+    background: var(--bg-light-pink);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    margin-bottom: 15px;
+    
 }
 
 .btn-outline {
     background: var(--bg-btn-alternate);
     padding: 10px 25px;
     border: 1px solid black;
-    color: var(--bg-text);
+    color: var(--text);
 }
 
 .btn-outline:hover {
     background: var(--bg-btn-main);
-    color: var(--bg-text);
+    color: var(--text);
 }
 
 .amount > div {
@@ -691,43 +706,60 @@ main h2 {
 .amount .total {
     font-size: var(--fs-20);
     font-weight: var(--fw-7);
-    color: brown;
+    color: var(--bg-btn-main);
 }
 
 
  /* checkout section style */
 .checkout {
-   /* width: 70%;*/
-    padding: 25px var(--px);
-    /*border-top: 1px solid var(--bg-btn-main);*/
+    padding: 20px var(--px);
 }
 
-.section-heading {
-    color: var(--bg-text);
-    margin-bottom: 30px;
-    font-size: var(--fs-20);
-    font-weight: var(--fw-4);
-}
-
-.payment-form { margin-bottom: 40px;}
-
-.payment-method {
+.payment-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /*align-items: center;
-    gap: 30px;*/
-    margin-bottom: 30px;
+    
+    margin-bottom: 40px;}
+
+.payment-method button {
+    width: 100%;
+}
+
+.cardholder-name,
+.card-number,
+.cvv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.expire-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.expire-date input {
+    margin-right: 5px;
+}
+
+#expire-date-day,
+#expire-date-month{
+    width: 50%;
+}
+
+.input-flex {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .payment-method .method {
-    border: 1px solid var(--bg-text);
-    border-radius: var(--radius);
-   
     display: flex;
     align-items: center;
     padding: 15px 30px;
     margin-bottom: 15px;
+    border: 1px solid var(--text);
+    border-radius: var(--border-radius);
     gap: 20px;
     cursor: pointer;
 }
@@ -738,7 +770,7 @@ main h2 {
 
 .payment-method .method .checkmark {
     margin-left: auto;
-    color: var(--bg-text);
+    color: var(--text);
 }
 
 .payment-method .method .fill { color: var(--bg-btn-main);}
@@ -748,58 +780,17 @@ main h2 {
     padding-left: 10px;
     margin-bottom: 5px;
     font-size: var(--fs-16);
-    color: var(--bg-text);  
+    color: var(--text);  
 }
 
 .input-default {
     background: var(--bg-light-pink);
-    border-radius: var(--radius);
-    color: var(--bg-text);
+    border-radius: var(--border-radius);
+    color: var(--text);
     margin-bottom: 15px;
-}
-
-.payment-form input{
-    width: 100%;
     padding: 10px 15px;
     font-size: var(--fs-16);
     font-weight: var(--fw-4);
-}
-
-/*.cardholder-name,
-.card-number {margin-bottom: 20px;}*/
-
-/*.card-number input,
-.cvv input { letter-spacing: 3px;}*/
-
-/*.input-flex {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}*/
-
-.input-flex .expire-date,
-.input-flex .cvv { width: 100%;}
-
-.expire-date .input-flex {
-    display: flex;
-    align-items: baseline;
-    width: 100%;
-    font-size: var(--fs-20);
-    color: var(--bg-text);
-    gap: 10px; 
-}
-
-/*.expire-date .input-flex input { /*text-align: center;*/ /*flex-direction: row;}*/
-
-.btn { border-radius: var(--radius); }
- 
-.btn:active { transform: scale(1.1);}
-
-.btn:focus {
-    color: var(--bg-text);
-    background: var(--bg-btn-alternate);
-    outline: 2px solid var(--bg-btn-alternate);
-    outline-offset: 2px;
 }
 
 .btn-primary {
@@ -809,10 +800,16 @@ main h2 {
     padding: 1rem 1.2rem;
     width: 100%;
 }
+.btn-primary:active { transform: scale(1.1);}
 
-.btn-primary b {margin-right: 10px;}
+.btn-primary:focus {
+    color: var(--text);
+    background: var(--bg-btn-alternate);
+    outline: 2px solid var(--bg-btn-alternate);
+    outline-offset: 2px;
+}
 
- 
+
 
 /* ------------------------------------------------------
         MEDIA QUERIES
@@ -874,3 +871,124 @@ main h2 {
         display: none;
     }
 }
+
+/* FOR EVENTS PAGE */
+@media screen and (min-width: 700px) {
+.events img {
+    width: 350px;
+    height: 100%;
+}
+.events p {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 3rem;
+        
+}
+
+.events-flex {
+    display: flex; 
+    margin: 2rem;
+}  
+    
+.events-block {
+    display: flex;
+    flex-direction: column;
+}
+   
+        
+}  
+  
+.events-block .btn {
+    margin: 3rem;
+    }   
+    
+}
+
+
+
+
+
+/* FOR SHOPPING CART */
+
+@media screen and (min-width: 700px){
+ .product-img {
+    width: 350px;
+}
+    h4 {
+    font: 400 4rem var(--heading-font);
+    line-height: 2;
+}
+    
+}    
+    @media screen and (min-width: 1060px){    
+.cart {
+    display: flex;
+    flex-direction: row;
+}
+.product-img {
+    width: 220px;
+}        
+.amount {
+    margin-top: 40px;
+}
+        
+.wrapper {
+    font-size: var(--fs-20);
+    padding: 30px var(--px);
+    border-top: none;
+    border-left: 1px solid var(--bg-btn-main);
+    border-bottom: none;
+}  
+.checkout {
+    border-top:1px solid var(--bg-btn-main);
+}
+        
+.label-default {
+    font-size: var(--fs-20);
+}
+        
+.payment-method {
+    display: flex;
+    gap: 20px;
+} 
+        
+.expiration {
+    display: flex;
+    gap: 20px;
+            
+}  
+        
+.cardholder-name,
+.card-number,
+.expire-date,
+.cvv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    }
+    
+}   
+
+@media screen and (min-width: 1200px){
+.product-img {
+    width: 300px;
+}  
+    
+} 
+
+@media screen and (min-width: 1400px){
+.product-img {
+    width: 450px;
+}  
+    
+}  
+
+
+
+
+
+
+
+
+
