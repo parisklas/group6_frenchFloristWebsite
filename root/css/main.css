@@ -470,30 +470,30 @@ p#name {
     background-color: var(--bg-dark-pink);
 }
 
-form {
+form.contactForm {
     font-size: 1.6em;
     text-align: left;
     margin: auto;
 }
 
-form h5, form label {
+.contactForm h5, .contactForm label {
     font: 1.3em var(--heading-font);
     display: block;
 }
 
-fieldset {
+.contactForm fieldset {
     padding: .8em;
     margin: 1em;
     border: solid 2px var(--bg-btn-main);
     background-color: var(--bg-light-pink);
 }
 
-legend {
+.contactForm legend {
     font: bold 1.4em var(--heading-font);
     padding: 0 .5em;
 }
 
-form li {
+.contactForm li {
     padding: .5em 0;
 }
 
@@ -503,7 +503,7 @@ form li {
     padding: .5em;
 }
 
-form input {
+.contactForm input {
     width: 280px;
     height: 35px;
     border: 1px solid var(--bg-btn-main);
@@ -515,7 +515,7 @@ form input {
     height: 20px;
     background-color: var(--bg-btn-main);
 }
-textarea {
+.contactForm textarea {
     width: 280px;
     min-height: 170px;
     border: 1px solid var(--bg-btn-main);
@@ -551,7 +551,7 @@ input[type='radio'] {
     border: var(--bg-btn-main);
 }
 
-form input#submit {
+.contactForm input#submit {
     margin: auto;
 /*     NEED TO CENTER THIS BUTTON */
 /*    NEED TO MAKE USE OF PATTERNS */
