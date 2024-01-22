@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>French Florist - My cart</title>
+    <!-- external CSS reset file -->
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- link to our own external js file -->
+    <script src="../scripts/main.js"></script>
+    <!-- external stylesheet -->
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <a href="../index.html"><img src="../images/logo_white.jpg" alt="logo" class="logo"></a>
+        </div>
+        <nav class="header-open">
+            <ul>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/occasions.html">Occasions</a></li>
+                <li><a href="../pages/flowers.html">Flowers</a></li>
+                <li><a href="../pages/plants.html">Plants</a></li>
+                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
+                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li class="current"><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            </ul>
+            <a href="#" class="showNav">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+        <nav class="hamburger-menu">
+            <ul>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/occasions.html">Occasions</a></li>
+                <li><a href="../pages/flowers.html">Flowers</a></li>
+                <li><a href="../pages/plants.html">Plants</a></li>
+                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
+                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li><a href="../pages/account.html">My Account</a></li>
+                <li class="current"><a href="../pages/cart.html">My Cart</a></li>
+            </ul>
+            <a href="#" class="closeNav">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </nav>
+        <input type="text" class="searchBar" placeholder="Search for anything!">
+    </header>
+    
+    
+    
+   <!-- main container -->  
+   <main>
+     <h1>Shopping cart</h1>
+      
+       <!-- cart section --> 
+    <section class="cart"> 
+      <article class="cart-item-box">
+         <h2>Order Summary</h2>
+           <div class="product-card">
+             <img src="../images/hydrangeasSmall.jpg" alt="hydrangeas" class="product-img">      
+                <div class="detail">
+                 <h4>Hydrangeas</h4>
+                    
+                      <div class="product-qty">
+                        <button id="decrement">
+                          <ion-icon name="remove-outline"></ion-icon>
+                        </button>
+                            <span id="quantity">1</span>
+                        <button id="increment">
+                          <ion-icon name="add-outline"></ion-icon> 
+                        </button>
+                      </div>
+                      <div class="price">
+                        $ <span id="price">96.00</span>
+                      </div>
+                    
+                </div>
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+          </div>      
+                
+          <div class="product-card">
+             <img src="../images/orchidsSmall.jpg" alt="orchids" class="product-img">      
+                <div class="detail">
+                 <h4>Orchids</h4>
+                    
+                      <div class="product-qty">
+                        <button id="decrement">
+                          <ion-icon name="remove-outline"></ion-icon>
+                        </button>
+                            <span id="quantity">2</span>
+                        <button id="increment">
+                          <ion-icon name="add-outline"></ion-icon> 
+                        </button>
+                      </div>
+                      <div class="price">
+                        $ <span id="price">134.00</span>
+                      </div>
+                    
+                </div>
+                    <button class="product-close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+          </div> 
+      </article>    
+            
+      <article class="wrapper">
+        <label for="wrapper" class="label-default">Discount code</label>
+          <div class="wrapper-flex">
+           <input type="text" name="discount-token" id="discount-token" class="input-default">         
+            <button class="btn btn-outline">Apply</button>
+          </div>
+            
+            
+        <article class="amount">
+                    <div class="subtotal">
+                        <span>Subtotal</span><span>$<span id="subtotal"></span>230.00</span>
+                    </div>
+                    
+                     <div class="tax">
+                        <span>Tax</span><span>$<span id="tax"></span>0.00</span>
+                    </div>
+                    
+                     <div class="shipping">
+                        <span>Shipping</span><span>$<span id="shipping"></span>0.00</span>
+                    </div>
+                    
+                    <div class="total">
+                        <span>Total</span><span>$<span id="total"></span>230.00</span>
+                    </div>
+                    
+                </article>
+                
+            </article>
+      
+    </section> 
+      
+      
+       <!-- checkout section -->   
+    <section class="checkout">
+       <h2 class="section-heading">Payment Details</h2>
+          
+       <div class="payment-form">
+               <div class="payment-method">
+                 <button class="method selected">
+                  <ion-icon name="card"></ion-icon>
+                  <span>Credit Card</span>
+                  <ion-icon class="checkmark fill" name="checkmark-circle"></ion-icon>
+                 </button>
+                 
+                 <button class="method">
+                  <ion-icon name="logo-paypal"></ion-icon>
+                  <span>PayPal</span>
+                  <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
+                 </button>
+                
+            </div>
+            <form action="#">
+               <div class="cardholder-name">
+                   <label for="cardholder-name" class="label-default">Cardholder name</label>
+                   <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
+               </div>
+               
+                <div class="card-number">
+                   <label for="card-number" class="label-default">Card number</label>
+                   <input type="number" name="card-number" id="card-number" class="input-default">
+               </div>
+               
+              <div class="input-flex">
+                  <div class="expire-date">
+                      <label for="expire-date" class="label-default">Expiration date</label>
+                        <div class="input-flex">
+                          <input type="number" name="day" id="expire-date" placeholder="31" min="1" max="31" class="input-default">
+                          /
+                          <input type="number" name="month" id="expire-date" placeholder="12" min="1" max="12" class="input-default">
+                      </div>
+                  
+                  </div>
+                  
+                   <div class="cvv">
+                   <label for="cvv" class="label-default">CVV</label>
+                   <input type="number" name="cvv" id="cvv" class="input-default">
+               </div>
+                  
+              </div>
+                
+            </form>
+            
+       </div> 
+        
+       <button class="btn btn-primary">
+          <b>Continue to pay</b><span id="payAmount"></span>
+           
+       </button>
+         
+
+    </section>
+       
+   </main> 
+    
+    <footer>
+        <section class="info">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+        </section>
+        <section class="text">
+            <p>Copyright &copy; 2023</p>
+            <p>French Florist.</p>
+            <p>All Rights Reserved.</p>
+        </section>
+        <section class="icons">
+            <a href="https://www.youtube.com/c/FrenchFloristLosAngeles"><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="https://www.facebook.com/frenchflorist"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/frenchflorist/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.yelp.com/biz/french-florist-los-angeles"><i class="fa-brands fa-yelp"></i></a>
+        </section>
+        <section class="logoPlacement">
+            <img src="../images/logo_white.jpg" class="logo" alt="logo">
+        </section>
+    </footer>
+    
+    
+    
+    
+    
+   <!-- custom js link -->  
+   <script src="../scripts/main.js"></script>
+   
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+
+</html>

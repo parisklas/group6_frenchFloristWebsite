@@ -48,19 +48,33 @@
     --bg-dark-pink: #fae9e8;
     --bg-btn-main: #8ea960;
     --bg-btn-alternate: #fffafb;
-}
-
+    --text: black;
+    
 /* Fonts - variables */
-:root {
+
     --heading-font: "Cormorant Garamond", serif;
     --body-font: "Khula", sans-serif;
     --btn-font: "Cormorant Garamond", serif;
-}
+
+/* Typography - variables */
+
+    --fs-32: 32px;
+    --fs-20: 20px;
+    --fs-16: 16px;
+    --fs-12: 12px;
+    --fs-10: 10px;
+    
+    --fw-4: 400;
+    --fw-7: 700;
 
 /* Styling variables */
-:root {
     --border-radius: 6px;
+    --px: 24px;
+    
 }
+
+
+
 
 /* ------------------------------------------------------
         GLOBAL STYLES
@@ -72,16 +86,19 @@ html {
 
 body {
     font-family: var(--body-font, "Open Sans");
+/*     I don't think we should put this on body ... but rather on the <main> for each page */
+/*    background-color: var(--bg-dark-pink);*/
 }
 
 h1 {
     font: 700 3.1rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
+    margin-top: var(--px);
 }
 
 h2 {
-    font: 700 2.8rem var(--heading-font);
+    font: 400 2.6rem var(--heading-font);
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
@@ -94,7 +111,15 @@ h3 {
     text-align: center;
 }
 
-h4 {}
+
+h4 {
+    font: 400 2.5rem var(--heading-font);
+    line-height: 1.5;
+}
+
+h5 {
+
+}
 
 p {
     font: 2rem var(--body-font);
@@ -112,7 +137,7 @@ img {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--text);
 }
 
 /* ------------------------------------------------------
@@ -120,7 +145,7 @@ a {
 -------------------------------------------------------*/
 .btn {
     font: 700 1.6rem var(--btn-font);
-    color: black;
+    color: var(--text);
     text-transform: uppercase;
     text-align: center;
     background-color: var(--bg-btn-main);
@@ -128,6 +153,7 @@ a {
     height: 4rem;
     padding: 1rem 1.2rem;
     border-radius: var(--border-radius);
+/*     Why is border radius broken */
 }
 
 img.logo {
@@ -153,10 +179,12 @@ img.logo {
 -------------------------------------------------------*/
 
 header {
-    background: url(../images/backgroundSmall.jpg);
+    background: url(../images/cover-rose.jpeg) repeat;
+    background-color: white;
     background-size: cover;
     position: relative;
     height: 150px;
+/*    Can we increase transparency ? */
 }
 
 /* Hamburger Nav Bar */
@@ -191,11 +219,10 @@ nav ul {
     position: absolute;
     right: 20px;
     top: 20px;
-    color: black;
+    color: var(--text);
     font-size: 30px;
 }
 
-/* Need to specify colors here : */
 a:link {
     color: black;
 }
@@ -217,7 +244,7 @@ a:active {
         FOOTER
 -------------------------------------------------------*/
 footer {
-    background: url(../images/backgroundSmall.jpg) repeat;
+    background: url(../images/cover-rose.jpeg) repeat;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px 50px;
@@ -372,14 +399,12 @@ p#name {
     border-radius: .6rem;
 }
 
-.showcase {}
-
 .container {
-    background-color: var(--bg-light-pink);
     width: 80%;
     margin: auto;
     border-radius: 6px;
     padding-bottom: 2em;
+    background-color: var(--bg-light-pink);
 }
 
 .accountLinks {
@@ -438,21 +463,208 @@ p#name {
     text-decoration-color: var(--bg-dark-pink);
 }
 
+
 /* ------------------------------------------------------
-        ABOUT PAGE CONTENT
+        FORM
 -------------------------------------------------------*/
 
-.project {
+.formPage {
+    background-color: var(--bg-dark-pink);
+}
+
+form {
+    font-size: 1.6em;
+    text-align: left;
+    margin: auto;    
+}
+
+form h5, form label {
+    font: 1.3em var(--heading-font);
+    display: block;
+}
+
+fieldset {
+    padding: .8em;
+    margin: 1em;
+    border: solid 2px var(--bg-btn-main);
     background-color: var(--bg-light-pink);
-    text-align: center;
-    padding: 5rem 2rem;
+}
+
+legend {
+    font: bold 1.4em var(--heading-font);
+    padding: 0 .5em;
+}
+
+form li {
+    padding: .5em 0;
+}
+
+.form-inline {
+    display: flex;
+    gap: 1em;
+    padding: .5em;
+}
+
+form input {
+    width: 280px;
+    height: 35px;
+    border: 1px solid var(--bg-btn-main);
+    border-radius: var(--border-radius);
+}
+
+.form-inline input {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-btn-main);
+}
+textarea {
+    width: 280px;
+    min-height: 170px;
+    border: 1px solid var(--bg-btn-main);
+    border-radius: var(--border-radius);
+}
+
+.form2 {
+    padding: 1.5em;
+}
+.form2 label {
+    margin-bottom: 10px;
+}
+
+.form2 select {
+    width: 280px;
+    height: 35px;
+    border: 1px solid var(--bg-btn-main);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+.form2 select option {
+    font: 1.2em var(--body-font); 
+}
+
+/* customize accent color for checkbox and radio inputs */
+input[type="checkbox"] {
+    accent-color: var(--bg-btn-main);
+    border: var(--bg-btn-main);
+}
+
+input[type='radio'] {
+    accent-color: var(--bg-btn-main);
+    border: var(--bg-btn-main);
+}
+
+form input#submit {
+    margin: auto;
+/*     NEED TO CENTER THIS BUTTON */
+/*    NEED TO MAKE USE OF PATTERNS */
 }
 
 
 
+
+/* ------------------------------------------------------
+        ABOUT PAGE CONTENT
+-------------------------------------------------------*/
+.homePage {
+    background-color: var(--bg-dark-pink);
+}
+
+.intro a.btn {
+    margin-top: 2em;
+}
+
+.project {
+   background-color: var(--bg-light-pink);
+}
+.project article, .intro article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.mapWrapper {
+    position: relative;
+    padding-bottom: 56%;
+    height: 0;
+    overflow: hidden;
+    
+}
+.mappWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
 /* ------------------------------------------------------
         EVENT PAGE CONTENT
 -------------------------------------------------------*/
+
+/* ------------------------------------------------------
+        FLOWERS PAGE CONTENT
+-------------------------------------------------------*/
+
+/*.flowersPage { }  IF NEEDED*/
+
+.flowersPage {
+    height: 10%;
+    background-color: var(--bg-dark-pink);
+}
+
+/*
+.flowersPage h2 {
+    margin-top: 2em;
+    color: var(--bg-btn-main);
+    font-family: 'Jacques Francois';
+    text-transform: none;
+    padding: 1em 0;
+    margin: 0;
+    display: none;
+    text-shadow: -2px 2px 2px var(--bg-light-pink);
+}
+*/
+
+.flowersPage h2 {
+    text-align: center;
+    
+}
+
+.flowersPage section {
+      display: flex;
+      flex-direction: row; /* Updated for responsiveness */
+      justify-content: space-between;
+      padding: 20px;
+      background-color: var(--bg-dark-pink); /* Added background color */
+}
+
+
+.flowersPage article {
+      flex: 1;
+      max-width: 30%;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      margin: 0 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+}
+
+.flowersPage img {
+      max-width: 100%;
+      height: auto;
+}
+
+.flowersPage .btn {
+    align-content: center
+}
 
 
 
@@ -476,6 +688,257 @@ p#name {
 
 
 
+
+/* ------------------------------------------------------
+        SHOPPING CART PAGE CONTENT
+-------------------------------------------------------*/
+ /* main container */
+main {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+    border-bottom: 1px solid var(--bg-btn-main);
+    padding: 20px var(--px);
+}
+
+main h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* cart section style */
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: var(--px);
+}
+.cart-item-box {
+    padding: 0 20px var(--px);
+}
+
+.product-card { 
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.product-img { 
+    margin-right: 4rem;
+    width: 150px;
+    border-radius: var(--border-radius);
+}
+
+.detail  {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    gap: 10px;
+}
+
+.price {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.product-qty button {
+    background: var(--bg-btn-alternate);
+    border-radius: var(--border-radius);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.product-close-btn {
+    background: var(--bg-btn-alternate);
+    color: red;  
+    border-radius: var(--border-radius);
+}
+
+.product-close-btn ion-icon {
+    font-size: 20px;  
+}
+
+.product-close-btn:hover ion-icon { color: black;}
+
+.wrapper {
+    padding: 20px var(--px);
+    border-top: 1px solid var(--bg-btn-main);
+    border-bottom: 1px solid var(--bg-btn-main);
+}
+
+.wrapper-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-default {
+    padding: 12px 40px;
+    width: 100%;
+    font-weight: var(--fw-7);
+    letter-spacing: 2px;
+}
+
+.btn-outline {
+    background: var(--bg-btn-alternate);
+    padding: 10px 25px;
+    border: 1px solid black;
+    color: var(--bg-text);
+}
+
+.btn-outline:hover {
+    background: var(--bg-btn-main);
+    color: var(--bg-text);
+}
+
+.amount > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.amount > div:not(:last-child) {margin-bottom: 10px;}
+
+.amount .total {
+    font-size: var(--fs-20);
+    font-weight: var(--fw-7);
+    color: brown;
+}
+
+
+ /* checkout section style */
+.checkout {
+   /* width: 70%;*/
+    padding: 25px var(--px);
+    /*border-top: 1px solid var(--bg-btn-main);*/
+}
+
+.section-heading {
+    color: var(--bg-text);
+    margin-bottom: 30px;
+    font-size: var(--fs-20);
+    font-weight: var(--fw-4);
+}
+
+.payment-form { margin-bottom: 40px;}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /*align-items: center;
+    gap: 30px;*/
+    margin-bottom: 30px;
+}
+
+.payment-method .method {
+    border: 1px solid var(--bg-text);
+    border-radius: var(--radius);
+   
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    margin-bottom: 15px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .selected { border-color: var(--bg-btn-main);}
+
+.payment-method .method ion-icon {font-size: 30px;}
+
+.payment-method .method .checkmark {
+    margin-left: auto;
+    color: var(--bg-text);
+}
+
+.payment-method .method .fill { color: var(--bg-btn-main);}
+
+.label-default {
+    display: flex;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: var(--fs-16);
+    color: var(--bg-text);  
+}
+
+.input-default {
+    background: var(--bg-light-pink);
+    border-radius: var(--radius);
+    color: var(--bg-text);
+    margin-bottom: 15px;
+}
+
+.payment-form input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-4);
+}
+
+/*.cardholder-name,
+.card-number {margin-bottom: 20px;}*/
+
+/*.card-number input,
+.cvv input { letter-spacing: 3px;}*/
+
+/*.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}*/
+
+.input-flex .expire-date,
+.input-flex .cvv { width: 100%;}
+
+.expire-date .input-flex {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    font-size: var(--fs-20);
+    color: var(--bg-text);
+    gap: 10px; 
+}
+
+/*.expire-date .input-flex input { /*text-align: center;*/ /*flex-direction: row;}*/
+
+ 
+.btn:active { transform: scale(1.1);}
+
+.btn:focus {
+    color: var(--bg-text);
+    background: var(--bg-btn-alternate);
+    outline: 2px solid var(--bg-btn-alternate);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: var(--bg-btn-main);
+    font-weight: var(--fw-7);
+    color: var(--bg-text);
+    padding: 1rem 1.2rem;
+    width: 100%;
+}
+
+.btn-primary b {margin-right: 10px;}
+
+ 
 
 /* ------------------------------------------------------
         MEDIA QUERIES

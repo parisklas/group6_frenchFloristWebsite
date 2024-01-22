@@ -29,17 +29,6 @@ $(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Handlebars for account page:
 
 const context = {
@@ -69,6 +58,3 @@ const templateSource = templateElement.innerHTML;
 const template = Handlebars.compile(templateSource);
 const compiledHtml = template(context);
 document.getElementById('information').innerHTML = compiledHtml;
-
-
-//
