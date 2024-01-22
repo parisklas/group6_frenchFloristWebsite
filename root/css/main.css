@@ -49,15 +49,12 @@
     --bg-btn-main: #8ea960;
     --bg-btn-alternate: #fffafb;
     --text: black;
-    
-
 
 /* Fonts - variables */
 
     --heading-font: "Cormorant Garamond", serif;
     --body-font: "Khula", sans-serif;
     --btn-font: "Cormorant Garamond", serif;
-
 
 /* Typography - variables */
 
@@ -66,16 +63,14 @@
     --fs-16: 16px;
     --fs-12: 12px;
     --fs-10: 10px;
-    
+
     --fw-4: 400;
     --fw-7: 700;
-   
-}
 
 /* Styling variables */
-:root {
     --border-radius: 6px;
     --px: 24px;
+
 }
 
 
@@ -91,7 +86,6 @@ html {
 
 body {
     font-family: var(--body-font, "Open Sans");
-    background-color: var(--bg-dark-pink);
 }
 
 h1 {
@@ -121,6 +115,9 @@ h4 {
     line-height: 1.5;
 }
 
+h5 {
+
+}
 
 p {
     font: 2rem var(--body-font);
@@ -134,12 +131,11 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
-
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--text);
 }
 
 /* ------------------------------------------------------
@@ -147,17 +143,15 @@ a {
 -------------------------------------------------------*/
 .btn {
     font: 700 1.6rem var(--btn-font);
-    color: black;
+    color: var(--text);
     text-transform: uppercase;
     text-align: center;
     background-color: var(--bg-btn-main);
     width: 25.7rem;
     height: 4rem;
     padding: 1rem 1.2rem;
-    border: none;
-    cursor: pointer;
     border-radius: var(--border-radius);
-
+/*     Why is border radius broken */
 }
 
 img.logo {
@@ -184,27 +178,11 @@ img.logo {
 
 header {
     background: url(../images/cover-rose.jpeg) repeat;
+    background-color: white;
     background-size: cover;
     position: relative;
     height: 150px;
-}
-
-
-
-/*header::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 110px;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjusted  paleness */
-   /* z-index: 1;
-}*/
-
-nav {
-    position: relative;
-    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
+/*    Can we increase transparency ? */
 }
 
 /* Hamburger Nav Bar */
@@ -222,11 +200,8 @@ nav ul {
     background-color: var(--bg-light-pink);
     text-align: center;
     border-bottom: solid 1px #fae9e8;
-}
-
-/* This is a decendent selector */
-nav li:first-child {
-    border-top: solid 1px #fae9e8; 
+    display: block;
+    padding: .6em;
 }
 
 .showNav {
@@ -242,11 +217,10 @@ nav li:first-child {
     position: absolute;
     right: 20px;
     top: 20px;
-    color: black;
+    color: var(--text);
     font-size: 30px;
 }
 
-/* Need to specify colors here : */
 a:link {
     color: black;
 }
@@ -274,33 +248,15 @@ footer {
     grid-template-rows: 50px 50px;
 }
 
-
-/*footer::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjusted  paleness */
-   /* z-index: 1;*/
-/*}*/
-
-
 footer p {
     font-size: 1.2rem;
     line-height: 0;
     margin: 0;
     padding: .6em;
-    
-    position: relative;
-    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 footer i {
     color: black;
-    position: relative;
-    z-index: 2; /* Made the navigation text visible on top of the background color image with roses*/
 }
 
 .info {
@@ -332,8 +288,6 @@ footer i {
     grid-area: 1/ 3/ 3/ 4;
     justify-self: flex-end;
     align-self: flex-end;
-    position: relative;
-    z-index: 2; /* Made text visible on top of the background color image with roses*/
 }
 
 .logoPlacement .logo {
@@ -443,13 +397,12 @@ p#name {
     border-radius: .6rem;
 }
 
-.showcase {}
-
 .container {
     width: 80%;
     margin: auto;
     border-radius: 6px;
     padding-bottom: 2em;
+    background-color: var(--bg-light-pink);
 }
 
 .accountLinks {
@@ -508,14 +461,128 @@ p#name {
     text-decoration-color: var(--bg-dark-pink);
 }
 
+
+/* ------------------------------------------------------
+        FORM
+-------------------------------------------------------*/
+
+.formPage {
+    background-color: var(--bg-dark-pink);
+}
+
+form {
+    font-size: 1.6em;
+    text-align: left;
+    margin: auto;
+}
+
+form h5, form label {
+    font: 1.3em var(--heading-font);
+    display: block;
+}
+
+fieldset {
+    padding: .8em;
+    margin: 1em;
+    border: solid 2px var(--bg-btn-main);
+    background-color: var(--bg-light-pink);
+}
+
+legend {
+    font: bold 1.4em var(--heading-font);
+    padding: 0 .5em;
+}
+
+form li {
+    padding: .5em 0;
+}
+
+.form-inline {
+    display: flex;
+    gap: 1em;
+    padding: .5em;
+}
+
+form input {
+    width: 280px;
+    height: 35px;
+    border: 1px solid var(--bg-btn-main);
+    border-radius: var(--border-radius);
+}
+
+.form-inline input {
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-btn-main);
+}
+textarea {
+    width: 280px;
+    min-height: 170px;
+    border: 1px solid var(--bg-btn-main);
+    border-radius: var(--border-radius);
+}
+
+.form2 {
+    padding: 1.5em;
+}
+.form2 label {
+    margin-bottom: 10px;
+}
+
+.form2 select {
+    width: 280px;
+    height: 35px;
+    border: 1px solid var(--bg-btn-main);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+.form2 select option {
+    font: 1.2em var(--body-font);
+}
+
+/* customize accent color for checkbox and radio inputs */
+input[type="checkbox"] {
+    accent-color: var(--bg-btn-main);
+    border: var(--bg-btn-main);
+}
+
+input[type='radio'] {
+    accent-color: var(--bg-btn-main);
+    border: var(--bg-btn-main);
+}
+
+form input#submit {
+    margin: auto;
+/*     NEED TO CENTER THIS BUTTON */
+/*    NEED TO MAKE USE OF PATTERNS */
+}
+
+
+
+
 /* ------------------------------------------------------
         ABOUT PAGE CONTENT
 -------------------------------------------------------*/
+.homePage {
+    background-color: var(--bg-dark-pink);
+}
+
+.intro a.btn {
+    margin-top: 2em;
+}
 
 .project {
-    background-color: var(--bg-light-pink);
+   background-color: var(--bg-light-pink);
+}
+.project article, .intro article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     text-align: center;
-    padding: 5rem 2rem;
+    width: 85%;
+    margin: auto;
+    padding: 5rem 0;
 }
 
 .mapWrapper {
@@ -523,7 +590,7 @@ p#name {
     padding-bottom: 56%;
     height: 0;
     overflow: hidden;
-    
+
 }
 .mappWrapper iframe {
     position: absolute;
@@ -531,8 +598,8 @@ p#name {
     left: 0;
     width: 100%;
     height: 100%;
-    
-    
+
+
 }
 
 /* ------------------------------------------------------
@@ -542,6 +609,261 @@ p#name {
     text-align: center;
     padding: 5rem 2rem;
 }
+/* ------------------------------------------------------
+        FLOWERS PAGE CONTENT
+-------------------------------------------------------*/
+
+/*.flowersPage { }  IF NEEDED*/
+
+.flowersPage {
+    height: 10%;
+    background-color: var(--bg-dark-pink);
+}
+
+
+.flowersPage h2 {
+    margin: 50 0 30 0;
+    text-align: center;
+    width: 100%;
+}
+
+.fpCollections {
+    background-color: var(--bg-dark-pink);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 3rem;
+}
+
+.tropical {
+     border-radius: 6px;
+}
+
+.tropical figure {
+    border-radius: 6px;
+    margin: 20px;
+}
+
+
+.fpCollections article {
+    background: var(--bg-light-pink);
+    vertical-align: top;
+    margin: 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.flowersPage .btn {
+    display: grid;
+    margin: 3em auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--bg-btn-main);
+    border-radius: 5px;
+    color: var(--text);
+    place-items: center;
+}
+
+.fpBuild {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+/*    max-width: 800px;*/
+    margin: 0 auto;
+}
+
+.fpBuild h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.fpBuild img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px
+}
+
+.fpBuild p {
+    text-align: left;
+    flex: 1;
+}
+
+.fpBuild article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fpSales {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.fpSales article {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.fpSales figure {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    flex: 0 1 calc(20%)
+}
+
+.fpSales img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fpSales figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(113, 121, 126, 0.7);
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------------------------------------
+        PLANTS PAGE CONTENT
+-------------------------------------------------------*/
+
+/*.flowersPage { }  IF NEEDED*/
+
+.plantsPage {
+    height: 10%;
+    background-color: var(--bg-dark-pink);
+}
+
+
+.plantsPage h2 {
+    margin: 50 0 30 0;
+    text-align: center;
+    width: 100%;
+}
+
+.ppCollections {
+    background-color: var(--bg-dark-pink);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-bottom: 3rem;
+}
+
+.orchids {
+     border-radius: 6px;
+}
+
+.orchids figure {
+    border-radius: 6px;
+    margin: 20px;
+}
+
+
+.ppCollections article {
+    background: var(--bg-light-pink);
+    vertical-align: top;
+    margin: 10px 10px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.plantsPage .btn {
+    display: grid;
+    margin: 3em auto;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: var(--bg-btn-main);
+    border-radius: 5px;
+    color: var(--text);
+    place-items: center;
+}
+
+.ppCare {
+    background-color: var(--bg-light-pink);
+    text-align: center;
+/*    max-width: 800px;*/
+    margin: 0 auto;
+}
+
+.ppCare h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.ppCare img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    float: right;
+    margin-right: 20px;
+    margin-left: 20px
+}
+
+.ppCare p {
+    text-align: left;
+    flex: 1;
+}
+
+.ppCare article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ppHypo {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ppHypo article {
+/*    display: flex;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ppHypo figure {
+    display: flex;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    flex: 0 1 calc(20%)
+}
+
+.ppHypo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ppHypo figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(113, 121, 126, 0.7);
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
 
 
 
@@ -596,13 +918,13 @@ main h2 {
     flex-direction: column;
     justify-content: flex-end;
     padding: 0;
-    
+
 }
 .cart-item-box {
     padding: 20px var(--px);
 }
 
-.product-card { 
+.product-card {
     display: flex;
     margin-bottom: 20px;
     flex-direction: row;
@@ -610,7 +932,7 @@ main h2 {
     gap: 20px;
 }
 
-.product-img { 
+.product-img {
     width: 150px;
     border-radius: var(--border-radius);
 }
@@ -619,7 +941,7 @@ main h2 {
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
-    
+
     gap: 10px;
 }
 
@@ -644,17 +966,17 @@ main h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-} 
+}
 
 .product-close-btn {
     display: flex;
     background: var(--bg-btn-alternate);
-    color: red;  
+    color: red;
     border-radius: var(--border-radius);
 }
 
 .product-close-btn ion-icon {
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 .product-close-btn:hover ion-icon { color: black;}
@@ -681,7 +1003,7 @@ main h2 {
     border-radius: var(--border-radius);
     color: var(--text);
     margin-bottom: 15px;
-    
+
 }
 
 .btn-outline {
@@ -718,7 +1040,7 @@ main h2 {
 .payment-form {
     display: flex;
     flex-direction: column;
-    
+
     margin-bottom: 40px;}
 
 .payment-method button {
@@ -780,7 +1102,7 @@ main h2 {
     padding-left: 10px;
     margin-bottom: 5px;
     font-size: var(--fs-16);
-    color: var(--text);  
+    color: var(--text);
 }
 
 .input-default {
@@ -882,26 +1204,26 @@ main h2 {
     display: flex;
     align-items: flex-start;
     margin: 0 3rem;
-        
+
 }
 
 .events-flex {
-    display: flex; 
+    display: flex;
     margin: 2rem;
-}  
-    
+}
+
 .events-block {
     display: flex;
     flex-direction: column;
 }
-   
-        
-}  
-  
+
+
+}
+
 .events-block .btn {
     margin: 3rem;
-    }   
-    
+    }
+
 }
 
 
@@ -918,46 +1240,46 @@ main h2 {
     font: 400 4rem var(--heading-font);
     line-height: 2;
 }
-    
-}    
-    @media screen and (min-width: 1060px){    
+
+}
+    @media screen and (min-width: 1060px){
 .cart {
     display: flex;
     flex-direction: row;
 }
 .product-img {
     width: 220px;
-}        
+}
 .amount {
     margin-top: 40px;
 }
-        
+
 .wrapper {
     font-size: var(--fs-20);
     padding: 30px var(--px);
     border-top: none;
     border-left: 1px solid var(--bg-btn-main);
     border-bottom: none;
-}  
+}
 .checkout {
     border-top:1px solid var(--bg-btn-main);
 }
-        
+
 .label-default {
     font-size: var(--fs-20);
 }
-        
+
 .payment-method {
     display: flex;
     gap: 20px;
-} 
-        
+}
+
 .expiration {
     display: flex;
     gap: 20px;
-            
-}  
-        
+
+}
+
 .cardholder-name,
 .card-number,
 .expire-date,
@@ -967,22 +1289,22 @@ main h2 {
     width: 100%;
     margin-right: 0;
     }
-    
-}   
+
+}
 
 @media screen and (min-width: 1200px){
 .product-img {
     width: 300px;
-}  
-    
-} 
+}
+
+}
 
 @media screen and (min-width: 1400px){
 .product-img {
     width: 450px;
-}  
-    
-}  
+}
+
+}
 
 
 

@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>French Florist - Subscribe Now</title>
+    <title>French Florist - Contact Us</title>
     <!-- external CSS reset file -->
-    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+   <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -32,7 +32,7 @@
                 <li><a href="../pages/flowers.html">Flowers</a></li>
                 <li><a href="../pages/plants.html">Plants</a></li>
                 <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
-                <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
                 <li><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
                 <li><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
@@ -59,114 +59,64 @@
         <input type="text" class="searchBar" placeholder="Search for anything!">
     </header>
 
-    <main>
+    <main class="formPage">
         <form>
+            <h1>Contact Us</h1>
             <fieldset>
-                <legend>Choose a size:</legend>
-                <ul>
-                    <li>
-                        <input type="radio" id="classic" value="classic" name="size">
-                        <label for="classic">Classic Blooms</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="signature" value="signature" name="size">
-                        <label for="signature">Signature Collection</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="majestic" value="majestic" name="size">
-                        <label for="majestic">Majestic Arrangements</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>Choose duration:</legend>
-                <label for="duration"></label>
-                <select name="duration" id="duration">
-                    <option value="continous">Continuously (cancel anytime) selected</option>
-                    <option value="3mo">3 Months</option>
-                    <option value="6mo">6 Months</option>
-                    <option value="9mo">9 Months</option>
-                    <option value="12mo">12 Months</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <legend>Choose frequency:</legend>
-                <ul>
-                    <li>
-                        <input type="radio" id="weekly" value="weekly" name="frequency">
-                        <label for="weekly">Delivery once a week</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="every2" value="every2" name="frequency">
-                        <label for="every2">Delivery every other week</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="every3" value="every3" name="frequency">
-                        <label for="every3">Delivery every 3 weeks</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="every4" value="every4" name="frequency">
-                        <label for="every4">Delivery every 4 weeks</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset>
-                <legend>Your information:</legend>
-                <li>
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" required>
-                </li>
-                <li>
-                    <label for="fname">Last name:</label>
-                    <input type="text" id="lname" name="lname" required>
-                </li>
-                <li>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </li>
-                <li>
-                    <label for="phone">Phone number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </li>
-                <li>
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" required>
-                </li>
-                <li>
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" required>
-                </li>
-                <li>
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" required>
-                </li>
-                <li>
-                    <label for="zip">Zip</label>
-                    <input type="text" id="zip" name="zipCode" required>
-                </li>
-            </fieldset>
-            <fieldset>
-                <legend>Payment Info:</legend>
-                <ul>
-                    <li>
-                        <input type="radio" id="credit" value="credit" name="payment">
-                        <label for="every4">Credit Card</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="paypal" value="paypal" name="payment">
-                        <label for="paypal">PayPal</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="terms" id="terms" required>
-                        <label for="terms">I have read and agree to the terms and conditions.</label>
-                    </li>
-                </ul>
+                <legend>Contact Information</legend>
+                <section>
+                    <ul>
+                        <li>
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname" required>
+                        </li>
+                        <li>
+                            <label for="fname">Last name:</label>
+                            <input type="text" id="lname" name="lname" required>
+                        </li>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </li>
+                        <li>
+                            <label for="phone">Phone number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </li>
+                        <h5>Preferred Contact Method:</h5>
+                        <div class="form-inline">
+                        <li>
+                            <input type="radio" id="email" value="email" name="preference">
+                            <label for="email">Email me</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="phone" value="phone" name="preference">
+                            <label for="phone">Call me</label>
+                        </li>
+                        </div>
+                        <h5>Subscribe to Newsletter:</h5>
+                        <li class="form-inline">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <label for="newsleter">Yes, I want to subscribe</label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="form2">
+                    <label for="inquiry">Inquiry Type:</label>
+                    <select name="inquiry" id="inquiry">
+                        <option value="general">General Inquiry</option>
+                        <option value="order">Order Related</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                    <label for="message" id="message">Your Question or Message:</label>
+                    <textarea name="message" id="message"></textarea>
+                </section>
+                <input type="submit" id="submit" class="btn" value="Submit">
             </fieldset>
         </form>
 
     </main>
 
-     <footer>
+    <footer>
         <section class="info">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms &amp; Conditions</a>
