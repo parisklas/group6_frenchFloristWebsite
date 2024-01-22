@@ -7,36 +7,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>French Florist - Plants</title>
     <!-- external CSS reset file -->
-<!--    <link href="../css/reset.css" rel="stylesheet" type="text/css">-->
+    <!--  <link href="../css/reset.css" rel="stylesheet" type="text/css">-->
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Khula:wght@400;700&family=Parisienne&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- link to our own external js file -->
+    <script src="../scripts/main.js"></script>
     <!-- external stylesheet -->
     <link href="../css/main.css" rel="stylesheet" type="text/css">
-
 </head>
 
-
+<body>
     <header>
-         <img src="../images/smallLogo.svg" class="logo" alt="logo">
-
-        <!--        Hamburger menu Nav     -->
-        <nav>
-            <input type="checkbox" id="showNavBar" role="button">
-            <label for="showNavBar" class="showNavBar"><i class="fa-solid fa-bars"></i></label>
-            <ul class="navBar">
-                <li><a href="../index.html">Home</a></li>
-                 <li class="current"><a href="../pages/about.html">About</a></li>
+        <div class="header-left">
+            <a href="../index.html"><img src="../images/logo_white.jpg" alt="logo" class="logo"></a>
+        </div>
+        <nav class="header-open">
+            <ul>
+                <li><a href="../pages/about.html">About</a></li>
                 <li><a href="../pages/occasions.html">Occasions</a></li>
                 <li><a href="../pages/flowers.html">Flowers</a></li>
                 <li><a href="../pages/plants.html">Plants</a></li>
-                <li><a href="../pages/events.html">Weddings/Events</a></li>
-                <li><a href="../pages/subscriptions.html">Subscriptions</a></li>
-                <!-- Hide icons in hamburger menu, show when page expands -->
-                <li class="hide"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="hide current"><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
-                <li class="hide"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
+                <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li><a href="../pages/account.html"><i class="fa-regular fa-user"></i></a></li>
+                <li><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li id="search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
+            <a href="#" class="showNav">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </nav>
+        <nav class="hamburger-menu">
+            <ul>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/occasions.html">Occasions</a></li>
+                <li><a href="../pages/flowers.html">Flowers</a></li>
+                <li><a href="../pages/plants.html">Plants</a></li>
+                <li><a href="../pages/events.html">Weddings &amp; Events</a></li>
+                <li class="current"><a href="../pages/subscriptions.html">Subscriptions</a></li>
+                <li><a href="../pages/account.html">My Account</a></li>
+                <li><a href="../pages/cart.html">My Cart</a></li>
+            </ul>
+            <a href="#" class="closeNav">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </nav>
+        <input type="text" class="searchBar" placeholder="Search for anything!">
     </header>
+
+    <main class="plantsPage">
+
+
+        <h2>Collections</h2>
+        <section class="ppCollections">
+            <article class="orchids">
+                <figure>
+                    <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                    <figcaption>Orchids</figcaption>
+                </figure>
+                <p>French Florist has a wide variety of orchids available for delivery nationwide, including same day local delivery.</p>
+            </article>
+
+            <article class="orchids">
+                <figure>
+                    <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                    <figcaption>Succulents</figcaption>
+                </figure>
+                <p>Our vase arrangements are crafted with the utmost care and attention to detail, with the customer laways at the forefront of our minds. </p>
+            </article>
+
+            <article class="orchids">
+                <figure>
+                    <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                    <figcaption>Orchids</figcaption>
+                </figure>
+                <p>Each of our local designers works with care and attention to detail to ensure your bouquet will pass strict quality control checks. </p>
+            </article>
+        </section>
+        <a href="pages/subscriptions.html" class="btn">Shop all</a>
+
+
+        <section class="ppCare">
+            <h2>Build Your Bouquet</h2>
+            <article>
+                <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                <p>Let our florist design a bouquet and have your favorite flowers delivered today. Pick the colours you would like for us to use along with your favorite flowers so that we can create a custom arrangement that's perfect for you! You are the bouquet designer when you build a bouquet!</p>
+            </article>
+            <a href="pages/subscriptions.html" class="btn">More Tips</a>
+        </section>
+        
+          <section class="ppHypo">
+            <h2>Hypoallergenic</h2>
+            <article>
+               <figure>
+                <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                <figcaption>Hydrangea</figcaption>
+                </figure>
+                
+                <figure>
+                <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                <figcaption>Cactus</figcaption>
+                </figure>
+                
+                <figure>
+                <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                <figcaption>Plant 3</figcaption>
+                </figure>
+                
+                <figure>
+                <img src="../images/home-page1.jpg" alt="bouquet of flowers">
+                <figcaption>Plant 4</figcaption>
+                </figure>
+                
+                <p>Here are our current flower specials.  Come back and check on these as they change based on inventory, season and holiday.</p>
+            </article>
+            <a href="pages/subscriptions.html" class="btn">Shop All</a>
+        </section>      
+
+    </main>
+
+
+
+    <footer>
+        <section class="info">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+        </section>
+        <section class="text">
+            <p>Copyright &copy; 2023</p>
+            <p>French Florist.</p>
+            <p>All Rights Reserved.</p>
+        </section>
+        <section class="icons">
+            <a href="https://www.youtube.com/c/FrenchFloristLosAngeles"><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="https://www.facebook.com/frenchflorist"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/frenchflorist/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.yelp.com/biz/french-florist-los-angeles"><i class="fa-brands fa-yelp"></i></a>
+        </section>
+        <section class="logoPlacement">
+            <img src="images/logo_white.jpg" class="logo" alt="logo">
+        </section>
+
+    </footer>
+
+</body>
+</html>
