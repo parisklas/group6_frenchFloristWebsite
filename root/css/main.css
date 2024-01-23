@@ -502,7 +502,7 @@ p#name {
 .formPage {
     background-color: var(--bg-dark-pink);
     margin-top: 0;
-    padding: 3.5em 2em;
+    padding: 3.5em auto;
 }
 
 form.contactForm {
