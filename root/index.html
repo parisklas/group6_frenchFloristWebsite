@@ -23,11 +23,17 @@
 <body>
     <header>
             <div class="header-left">
-                <a href="index.html"><img src="images/logo_white.jpg" alt="logo" class="logo"></a>
+                <a href="index.html" class="logoLink"><img src="images/logo_white.jpg" alt="logo" class="logo"></a>
             </div>
             <nav class="header-open">
                 <ul>
-                    <li><a href="pages/about.html">About</a></li>
+                    <li id="flyout"><a href="pages/about.html">About</a>
+                        <ul id="submenu">
+                            <li><a href="pages/form.html">Contact Us</a></li>
+                            <li class="bordered"><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Our Blog</a></li>
+                        </ul>
+                    </li>
                     <li><a href="pages/occasions.html">Occasions</a></li>
                     <li><a href="pages/flowers.html">Flowers</a></li>
                     <li><a href="pages/plants.html">Plants</a></li>
@@ -71,8 +77,10 @@
                 <a href="pages/flowers.html" class="btn">Find your perfect flower</a>
             </article>
         </section>
+        
         <section class="collections">
             <h2>Collections</h2>
+            <article class="showcase">
             <figure>
                 <img src="images/collections1.jpg" alt="tropical flowers">
                 <figcaption>Tropical Flowers</figcaption>
@@ -87,15 +95,16 @@
             </figure>
             <figure>
                 <img src="images/collections4.jpg" alt="elaborate flowers">
-                <figcaption>Elaborate Choices</figcaption>
+             <figcaption>Elaborate Choices</figcaption>
             </figure>
+            </article>
             <a href="pages/flowers.html" class="btn">Shop All</a>
         </section>
         <section class="subs">
             <article>
                 <h2>Subscriptions</h2>
-                <p>Our Custom Blooms program offers a personalized flower subscription, allowing you to choose the free delivery frequency of your perfect flowers to suit your lifestyle.</p>
                 <img src="images/home_subs1.jpg" alt="pink flowers in glass vase">
+                <p>Our Custom Blooms program offers a personalized flower subscription, allowing you to choose the free delivery frequency of your perfect flowers to suit your lifestyle.</p>
                 <a href="pages/subscriptions.html" class="btn">Subscription Options</a>
             </article>
         </section>
