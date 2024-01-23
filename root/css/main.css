@@ -1509,6 +1509,32 @@ iframe {
     .showNav {
         display: none;
     }
+    
+    #flyout {
+        position: relative;
+        display: inline-block;
+    }
+
+    #submenu {
+        display: none;
+        position: absolute;
+        top: 35px;
+        background-color: var(--bg-light-pink);
+        min-width: 200px;
+        box-shadow: 0 9px 16px 0 rgba(0, 0, 0, .2);
+        z-index: 1;
+    }
+
+    #flyout:hover #submenu {
+        display: block;
+    }
+
+    .bordered {
+        border-top: 1px solid var(--bg-dark-pink);
+        border-bottom: 1px solid var(--bg-dark-pink);
+    }
+} 
+/* End queries for Nav Bar at Small screen */
 
 
 /* FOR EVENTS PAGE */
@@ -1534,31 +1560,13 @@ iframe {
         display: flex;
         flex-direction: column;
     }
-
-    #flyout {
-        position: relative;
-        display: inline-block;
-    }
-
-    #submenu {
-        display: none;
-        position: absolute;
-        top: 35px;
-        background-color: var(--bg-light-pink);
-        min-width: 200px;
-        box-shadow: 0 9px 16px 0 rgba(0, 0, 0, .2);
-        z-index: 1;
-    }
-
-    #flyout:hover #submenu {
-        display: block;
-    }
-
-    .bordered {
-        border-top: 1px solid var(--bg-dark-pink);
-        border-bottom: 1px solid var(--bg-dark-pink);
-    }
+    
+    .events-block .btn {
+    margin: 3rem;
 }
+
+}
+/* End Media Query for Events page */
 
 
 /* FOR HOME PAGE, OCCASIONS PAGE */
@@ -1568,11 +1576,6 @@ iframe {
     .subs article {
         height: 550px;
     }
-
-
-.events-block .btn {
-    margin: 3rem;
-}
 
     .hero h2,
     .subs h2 {
@@ -1608,43 +1611,8 @@ iframe {
     .collections2 {
         padding: 5em 3rem;
     }
-
-
-@media screen and (min-width: 700px) {
-    .product-img {
-        width: 350px;
-    }
-
-    h4 {
-        font: 400 4rem var(--heading-font);
-        line-height: 2;
-    }
-
-}
-
-@media screen and (min-width: 1060px) {
-    .cart {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .product-img {
-        width: 220px;
-    }
-
-    .amount {
-        margin-top: 40px;
-    }
-
-    .wrapper {
-        font-size: var(--fs-20);
-        padding: 30px var(--px);
-        border-top: none;
-        border-left: 1px solid var(--bg-btn-main);
-        border-bottom: none;
-    }
-
-    .showcase {
+    
+   .showcase {
         display: flex;
         flex-flow: row nowrap;
         gap: 1em;
@@ -1695,7 +1663,6 @@ iframe {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-
     }
 
     .form2 {
@@ -1707,8 +1674,8 @@ iframe {
         padding: 1em;
     }
 
-
 }
+
 
 @media screen and (min-width: 880px) {
 
@@ -1789,34 +1756,6 @@ iframe {
 
     }
 
-    .checkout {
-        border-top: 1px solid var(--bg-btn-main);
-    }
-
-
-    .label-default {
-        font-size: var(--fs-20);
-    }
-
-    .payment-method {
-        display: flex;
-        gap: 20px;
-    }
-
-    .expiration {
-        display: flex;
-        gap: 20px;
-
-    }
-
-    .cardholder-name,
-    .card-number,
-    .expire-date,
-    .cvv {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-right: 0;
     }
 
 @media screen and (min-width: 970px) {
