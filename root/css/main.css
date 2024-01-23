@@ -366,6 +366,10 @@ h1 span {
     margin: 2em auto 5em;
 }
 
+.showcase figure {
+/*    width: 48%;*/
+}
+
 .homePage h2 {
     width: 100%;
 }
@@ -1638,6 +1642,7 @@ iframe {
         border-top: none;
         border-left: 1px solid var(--bg-btn-main);
         border-bottom: none;
+    }
 
     .showcase {
         display: flex;
