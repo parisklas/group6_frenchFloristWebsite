@@ -208,7 +208,6 @@ header {
     background-size: cover;
     position: relative;
     height: 150px;
-    /*    Can we increase transparency ? */
 }
 
 /* Hamburger Nav Bar */
@@ -356,6 +355,7 @@ h1 span {
     margin: auto;
     text-align: center;
 }
+
 .showcase {
     display: flex;
     flex-flow: row wrap;
@@ -474,7 +474,7 @@ p#name {
 }
 
 #subIntro img {
-    border: 2em solid rgba(250,233,232,.6);
+    border: 2em solid rgba(250, 233, 232, .6);
 }
 
 #subIntro a.btn,
@@ -499,6 +499,8 @@ p#name {
 
 .formPage {
     background-color: var(--bg-dark-pink);
+    margin-top: 0;
+    padding: 3.5em 2em;
 }
 
 form.contactForm {
@@ -507,10 +509,16 @@ form.contactForm {
     margin: auto;
 }
 
-.contactForm h5,
 .contactForm label {
     font: 1.3em var(--heading-font);
     display: block;
+}
+
+.contactForm h5 {
+    font: 1.3em var(--heading-font);
+    display: block;
+    padding-top: 1em;
+
 }
 
 .contactForm fieldset {
@@ -540,6 +548,7 @@ form.contactForm {
     height: 35px;
     border: 1px solid var(--bg-btn-main);
     border-radius: var(--border-radius);
+    padding-left: 1em;
 }
 
 .form-inline input {
@@ -553,6 +562,7 @@ form.contactForm {
     min-height: 170px;
     border: 1px solid var(--bg-btn-main);
     border-radius: var(--border-radius);
+    padding-left: 1em;
 }
 
 .form2 {
@@ -569,6 +579,7 @@ form.contactForm {
     border: 1px solid var(--bg-btn-main);
     border-radius: var(--border-radius);
     margin-bottom: 20px;
+    padding-left: 1em;
 }
 
 .form2 select option {
@@ -587,9 +598,25 @@ input[type='radio'] {
 }
 
 .contactForm input#submit {
-    margin: auto;
-    /*     NEED TO CENTER THIS BUTTON */
-    /*    NEED TO MAKE USE OF PATTERNS */
+    margin: 2em;
+}
+
+.formPageLowerHalf {
+    padding: 2em 0;
+    display: block;
+}
+
+.formPageLowerHalf span {
+    font-weight: bold;
+}
+
+.formPageLowerHalf a {
+    text-decoration: underline;
+    color: var(--bg-btn-main);
+}
+
+.formPageLowerHalf p {
+    text-align: center;
 }
 
 
@@ -1000,6 +1027,7 @@ iframe {
 #searchIcon {
     position: relative;
 }
+
 .searchBar {
     font: 1.6rem var(--body-font);
     position: absolute;
@@ -1309,15 +1337,17 @@ iframe {
 
 
 @media only screen and (min-width: 700px) {
-    
-/* FOR NAV BAR AT FULL SCREEN */
+
+    /* FOR NAV BAR AT FULL SCREEN */
     .header-open {
         width: 90%;
     }
+
     header {
         display: flex;
         align-items: flex-end;
     }
+
     .header-open ul {
         display: flex;
         justify-content: space-evenly;
@@ -1325,176 +1355,238 @@ iframe {
         box-shadow: -2px -2px 2px var(--bg-dark-pink);
         padding-right: 2%;
     }
+
     .header-open ul li {
         line-height: .8em;
         padding: 8px 4px;
     }
+
     .showNav {
         display: none;
-    } 
+    }
+
     #flyout {
         position: relative;
         display: inline-block;
     }
+
     #submenu {
         display: none;
         position: absolute;
         top: 35px;
         background-color: var(--bg-light-pink);
-        min-width:200px;
-        box-shadow: 0 9px 16px 0 rgba(0,0,0,.2);
+        min-width: 200px;
+        box-shadow: 0 9px 16px 0 rgba(0, 0, 0, .2);
         z-index: 1;
     }
-    
+
     #flyout:hover #submenu {
-       display: block; 
+        display: block;
     }
-    
+
     .bordered {
         border-top: 1px solid var(--bg-dark-pink);
         border-bottom: 1px solid var(--bg-dark-pink);
-    }    
+    }
 }
 
 /* FOR HOME PAGE, OCCASIONS PAGE */
 @media screen and (min-width: 800px) {
-    .hero article, .subs article {
+
+    .hero article,
+    .subs article {
         height: 550px;
     }
-    .hero h2, .subs h2 {
+
+    .hero h2,
+    .subs h2 {
         margin-bottom: 2em;
     }
-    .hero article, .subs article {
+
+    .hero article,
+    .subs article {
         display: block;
     }
+
     .hero img {
         float: right;
         margin-left: 2em;
     }
+
     .hero p {
         margin-bottom: 15%;
     }
+
     .subs p {
         margin: 10% 0;
     }
+
     .subs img {
         float: left;
         margin-right: 3em;
         max-width: 60%;
     }
 
-    .collections, .collections1, .collections2 {
+    .collections,
+    .collections1,
+    .collections2 {
         padding: 5em 3rem;
     }
-    
+
     .showcase {
         display: flex;
         flex-flow: row nowrap;
         gap: 1em;
         justify-content: space-evenly;
-        margin: 2em auto 5em;   
+        margin: 2em auto 5em;
     }
-    
-/* FOR FOOTER */
+
+    /* FOR FOOTER */
     footer {
         padding: 2px 30px;
     }
 
-/*  FOR ACCOUNT PAGE */
+    /*  FOR ACCOUNT PAGE */
     .accountPage {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
-        justify-content: center;  
+        justify-content: center;
     }
-    
+
     .articleLinks {
         grid-area: 1/1/-1/2;
     }
+
     #showcase {
         grid-area: 1/2/-1/3;
         margin-top: 5em;
         margin-top: 6em;
-    } 
+    }
+
+    /*    FOR FORM   */
+
+    .formPage {
+        margin: auto;
+    }
+
+    form.contactForm {
+        position: relative;
+    }
+
+    .contactForm fieldset {
+        display: inline-flex;
+        flex-flow: column wrap;
+        height: 700px;
+        width: 700px;
+        align-content: center;
+        align-items: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .form2 {
+        width: 48%;
+    }
+
+    .form1 {
+        width: 48%;
+        padding: 1em;
+    }
+
+
 }
 
 @media screen and (min-width: 880px) {
+
     /* FOR SUBSCRIPTIONS - Medium screen */
     .subOptions-flex {
         display: flex;
         gap: 3em;
         justify-content: center;
         width: 80%;
-        margin: 5em auto;   
+        margin: 5em auto;
     }
+
     #subIntro {
         display: block;
         height: 450px;
     }
+
     #subIntro p {
         max-width: 90%;
         margin: auto;
         position: relative;
     }
-    
+
     #subIntro img {
         float: right;
         margin: 1em 0 1em 5%;
     }
-    
+
     #subIntro a.btn {
         position: relative;
         top: 50px;
         left: 5%;
     }
-    
+
     /*    FOR ABOUT PAGE */
-    .intro article, .project article {
+    .intro article,
+    .project article {
         display: block;
-    } 
+    }
+
     .intro img {
         float: right;
         width: 75%;
         margin-left: 2em;
         margin-bottom: 2em;
     }
-/*    This pseudo-class selector targets the last <p> in the section with a class of intro */
+
+    /*    This pseudo-class selector targets the last <p> in the section with a class of intro */
     .intro p:last-of-type {
         margin-bottom: 8%;
     }
+
     .project img {
         float: left;
         margin-right: 3em;
     }
-    
+
     .reviews-flex {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1em;
     }
-    
+
     .locations {
         display: grid;
         grid-template-columns: repeat(2, minmax(200px, 1fr));
         grid-gap: 10px;
     }
+
     .aboutLinks {
         grid-column-start: 2;
         padding-top: 30%;
     }
-   
+
     iframe {
         position: relative;
         left: 50%;
     }
 
 }
+
 @media screen and (min-width: 970px) {
-/*    SUBSCRIPTIONS - large screen  */
+
+    /*    SUBSCRIPTIONS - large screen  */
     #subIntro img {
         margin-left: 3em;
     }
-     #subIntro a.btn {
+
+    #subIntro a.btn {
         position: relative;
         top: 50px;
         left: 15%;
