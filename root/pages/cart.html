@@ -2,10 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< Updated upstream
+    <title>French Florist - About Us</title>
+=======
+
     <title>French Florist - Shopping Cart</title>
+   
+>>>>>>> Stashed changes
     <!-- external CSS reset file -->
     <link href="../css/reset.css" rel="stylesheet" type="text/css">
     <!-- Google fonts -->
@@ -14,15 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" type="text/css">
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-   
-    <!-- Ionicon link -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
     <!-- link to our own external js file -->
     <script src="../scripts/main.js"></script>
-
     <!-- external stylesheet -->
     <link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
@@ -82,14 +81,14 @@
        <!-- cart section --> 
     <section class="cart"> 
 
-      <div class="cart-item-box">
+      <section class="cart-item-box">
          <h2>Order Summary</h2>
-           <div class="product-card">
+           <section class="product-card">
              <img src="../images/hydrangeasLarge.jpg" alt="hydrangeas" class="product-img">      
-                <div class="detail">
+                <section class="detail">
                  <h4>Hydrangeas</h4>
                     
-                      <div class="product-qty">
+                      <section class="product-qty">
                         <button class="decrement">
                           <ion-icon name="remove-outline"></ion-icon>
                         </button>
@@ -97,23 +96,23 @@
                         <button class="increment">
                           <ion-icon name="add-outline"></ion-icon> 
                         </button>
-                      </div>
-                      <div class="price">
+                      </section>
+                      <section class="price">
                         $ <span class="product-price">96.00</span>
-                      </div>
+                      </section>
                     
-                </div>
+                </section>
                     <button class="product-close-btn">
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
-          </div>      
+          </section>      
                 
-          <div class="product-card">
+          <section class="product-card">
              <img src="../images/orchidsLarge.jpg" alt="orchids" class="product-img">      
-                <div class="detail">
+                <section class="detail">
                  <h4>Orchids</h4>
                     
-                      <div class="product-qty">
+                      <section class="product-qty">
                         <button class="decrement">
                           <ion-icon name="remove-outline"></ion-icon>
                         </button>
@@ -121,27 +120,27 @@
                         <button class="increment">
                           <ion-icon name="add-outline"></ion-icon> 
                         </button>
-                      </div>
-                      <div class="price">
+                      </section>
+                      <section class="price">
                         $ <span class="product-price">134.00</span>
-                      </div>
+                      </section>
                     
-                </div>
+                </section>
                     <button class="product-close-btn">
                         <ion-icon name="close-outline"></ion-icon>
                     </button>
-          </div> 
-      </div>    
+          </section> 
+      </section>    
             
-      <div class="wrapper">
+      <section class="wrapper">
         <label for="discount-token" class="label-default">Discount code</label>
-          <div class="wrapper-flex">
+          <section class="wrapper-flex">
            <input type="text" name="discount-token" id="discount-token" class="input-discount">         
             <button class="btn btn-outline">Apply</button>
-          </div>
+          </section>
             
             
-        <div class="amount">
+        <section class="amount">
                     <div class="subtotal">
                         <span>Subtotal</span><span>$<span class="subtotal-amount">230.00</span></span>
                     </div>
@@ -158,9 +157,9 @@
                         <span>Total</span><span>$<span id="totalElem">230.00</span></span>
                     </div>
                     
-                </div>
+                </section>
                 
-            </div>
+            </section>
       
     </section> 
       
@@ -169,8 +168,8 @@
     <section class="checkout">
        <h2>Payment Details</h2>
           
-       <div class="payment-form">
-          <div class="payment-method">
+       <section class="payment-form">
+          <section class="payment-method">
               <button class="method selected">
                   <ion-icon name="card"></ion-icon>
                   <span>Credit Card</span>
@@ -182,43 +181,42 @@
                   <span>PayPal</span>
                   <ion-icon class="checkmark" name="checkmark-circle-outline"></ion-icon>
               </button>
-          </div>
+          </section>
        
          <form action="#">
-               <div class="cardholder-name">
+               <section class="cardholder-name">
                    <label for="cardholder-name" class="label-default">Cardholder name</label>
                    <input type="text" name="cardholder-name" id="cardholder-name" class="input-default">
-               </div>
+               </section>
                
-                <div class="card-number">
+                <section class="card-number">
                    <label for="card-number" class="label-default">Card number</label>
                    <input type="number" name="card-number" id="card-number" class="input-default">
-               </div>
+               </section>
                
-        <div class="expiration">
+        <section class="expiration">
 
-                <div class="expire-date">
+                <section class="expire-date">
                       <label for="expire-date-day" class="label-default">Expiration date</label>
-                <div class="input-flex">
+                <section class="input-flex">
                           <input type="number" name="day" id="expire-date-day" placeholder="31" min="1" max="31" class="input-default">
                           /
                           <input type="number" name="month" id="expire-date-month" placeholder="12" min="1" max="12" class="input-default">
-                </div>
-                  </div>
+                </section>
+                  </section>
                   
-                  <div class="cvv">
+                  <section class="cvv">
                       <label for="cvv" class="label-default">CVV</label>
                       <input type="number" name="cvv" id="cvv" class="input-default">
-                  </div>
-             </div>
+                  </section>
+             </section>
              
            </form>
            
-        </div>
+        </section>
             
         
-       <button class="btn btn-primary">
-          <b>Continue to pay</b><span id="payAmountBtn"></span>
+       <button class="btn-primary">Continue to pay
        </button>
        
     </section>
@@ -248,9 +246,11 @@
 
     </footer>
     
-</body>
-
-   <!-- Custom js link -->  
-   <script src="../scripts/cart.js"></script>
-
+    <!-- Custom js link -->  
+    <script src="../scripts/cart.js"></script> 
+     <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+   </body>
 </html>
