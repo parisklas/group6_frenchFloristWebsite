@@ -242,6 +242,7 @@ img.logo{
 nav ul {
     font: small-caps bold 1.8rem var(--heading-font);
      position: relative;
+    margin-bottom: 1em;
      z-index: 2; /* Made text visible on top of the background color image with roses*/
 }
 
@@ -291,7 +292,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px 50px;
-    background: url(../images/cover-rose.jpeg) repeat;
     background-size: cover;
     position: relative;
     height: 100px;
@@ -561,7 +561,7 @@ form.contactForm {
 
 .contactForm fieldset {
     padding: .8em;
-    margin: 1em;
+    margin: auto;
     border: solid 2px var(--bg-btn-main);
     background-color: var(--bg-light-pink);
 }
@@ -582,7 +582,7 @@ form.contactForm {
 }
 
 .contactForm input {
-    width: 328px;
+    width: min(90%, 280px);
     height: 35px;
     border: 1px solid var(--bg-btn-main);
     border-radius: var(--border-radius);
@@ -596,7 +596,7 @@ form.contactForm {
 }
 
 .contactForm textarea {
-    width: 280px;
+    width: min(90%, 280px);
     min-height: 170px;
     border: 1px solid var(--bg-btn-main);
     border-radius: var(--border-radius);
@@ -612,7 +612,7 @@ form.contactForm {
 }
 
 .form2 select {
-    width: 280px;
+    width: min(90%, 280px);
     height: 35px;
     border: 1px solid var(--bg-btn-main);
     border-radius: var(--border-radius);
