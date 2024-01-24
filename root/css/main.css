@@ -689,6 +689,13 @@ input[type='radio'] {
     text-align: center;
     width: 85%;
     margin: auto;
+}
+
+.intro article {
+    padding: 2em 0;
+}
+
+.project article {
     padding: 5rem 0;
 }
 
