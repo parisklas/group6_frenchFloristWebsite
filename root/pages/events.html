@@ -30,7 +30,13 @@
         </div>
         <nav class="header-open">
             <ul>
-                <li><a href="../pages/about.html">About</a></li>
+                <li id="flyout"><a href="../pages/about.html">About</a>
+                    <ul id="submenu">
+                        <li><a href="../pages/form.html">Contact Us</a></li>
+                        <li class="bordered"><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Our Blog</a></li>
+                    </ul>
+                </li>
                 <li><a href="../pages/occasions.html">Occasions</a></li>
                 <li><a href="../pages/flowers.html">Flowers</a></li>
                 <li><a href="../pages/plants.html">Plants</a></li>
@@ -58,6 +64,7 @@
 
                 <li><a href="../pages/account.html">My Account</a></li>
                 <li><a href="../pages/cart.html">My Cart</a></li>
+                <li><a href="../pages/form.html">Contact Us</a></li>
             </ul>
             <a href="#" class="closeNav">
                 <i class="fa-solid fa-xmark"></i>
@@ -66,15 +73,16 @@
         <input type="text" class="searchBar" placeholder="Search for anything!">
     </header>
 
-    
+    <!-- main container --> 
     <main>
+          <h1>Weddings &amp; Events</h1>
       <section class="events">
                 <article>
                     <h2>Events</h2>
                     <div class="events-flex">
                     <img src="../images/eventsLarge.jpg" alt="Flagship store">
                     <div class="events-block">
-                    <p>We specialize in designs that will make your event feel elegant, meaningful, and unique. Whether you are hosting a simple birthday dinner or something bigger, our designers will help every step of the way. 
+                    <p>Elevate your events with French Florist, where we specialize in creating elegant, meaningful, and unique floral designs. Whether it's a simple birthday dinner or a grand celebration, our dedicated designers add a personalized touch to every creation. Beyond the ordinary, our artistry and attention to detail transform your celebrations into extraordinary experiences, leaving a lasting impression on your guests. With seamless guidance from conceptualization to execution, we make the floral aspect of your event stress-free and visually stunning. Choose French Florist for a touch of sophistication in every petal.
                     </p><a href="../pages/flowers.html" class="btn">Find Your Event Idea</a>
                     </div>
                  </div>
@@ -88,12 +96,81 @@
                     <div class="events-flex">
                     <img src="../images/weddingLarge.jpg" alt="Flagship store">
                     <div class="events-block">
-                    <p>Make a selection from our endless wedding ideas, available in multiple palettes to complement your special day. Add an optional wedding party decorations or centerpieces. </p>
+                    <p>Discover endless wedding ideas at French Florist, each curated in multiple palettes to perfectly complement your special day. Choose from our exquisite selection and add optional wedding party decorations or centerpieces to elevate the ambiance. Our diverse range of floral arrangements ensures that your wedding reflects your unique style and creates a memorable atmosphere for you and your guests. Let French Florist be a part of your wedding journey, turning your vision into a blooming reality. </p>
                     <a href="../pages/flowers.html" class="btn">Find Your Wedding Idea</a>
                     </div>
                   </div>    
                 </article>
             </section>
+            
+       <!-- Video Section -->
+    <section class="video-section">
+    <h2>Watch Our Latest Video</h2>
+    <div class="video-container">
+       <iframe width="980" height="551" src="https://www.youtube.com/embed/4uSHDue2pQ8?si=iMnNOY03OWwSL74L" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+             
+             
+             
+             
+        <!-- Form section -->     
+         <section class="formEvents"> 
+            <h2>Contact Us</h2>
+             <form class="contactForm">
+            
+            <fieldset>
+                <legend>Contact Information</legend>
+                <section>
+                    <ul>
+                        <li>
+                            <label for="fname">First name:</label>
+                            <input type="text" id="fname" name="fname" required>
+                        </li>
+                        <li>
+                            <label for="fname">Last name:</label>
+                            <input type="text" id="lname" name="lname" required>
+                        </li>
+                        <li>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </li>
+                        <li>
+                            <label for="phone">Phone number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </li>
+                        <h5>Preferred Contact Method:</h5>
+                        <div class="form-inline">
+                        <li>
+                            <input type="radio" id="email" value="email" name="preference">
+                            <label for="email">Email me</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="phone" value="phone" name="preference">
+                            <label for="phone">Call me</label>
+                        </li>
+                        </div>
+                        <h5>Subscribe to Newsletter:</h5>
+                        <li class="form-inline">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <label for="newsleter">Yes, I want to subscribe</label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="form2">
+                    <label for="inquiry">Inquiry Type:</label>
+                    <select name="inquiry" id="inquiry">
+                        <option value="general">General Inquiry</option>
+                        <option value="order">Order Related</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                    <label for="message" id="message">Your Question or Message:</label>
+                    <textarea name="message" id="message"></textarea>
+                </section>
+                <input type="submit" id="submit" class="btn" value="Submit">
+            </fieldset>
+        </form>
+      </section>      
     
     </main>
    
