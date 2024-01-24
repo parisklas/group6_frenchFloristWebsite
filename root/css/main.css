@@ -776,6 +776,11 @@ iframe {
     background-color: var(--bg-dark-pink);
 }
 
+.flowersPage h2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
 .fpCollections {
     background-color: var(--bg-dark-pink);
     display: flex;
@@ -788,12 +793,13 @@ iframe {
     margin-bottom: 3rem;
 }
 
-
-.tropical {
-    border-radius: 6px;
+.fpSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.fpCollections article {
+.fpCollections  {
     background: var(--bg-light-pink);
     vertical-align: top;
     display: flex;
@@ -807,43 +813,24 @@ iframe {
     border-radius: 6px;
 }
 
-.fpCollections article figure {
+.fpCollections img {
     border-radius: 6px;
-    margin: 20px;
     max-width: 100%;
     height: auto;
+    margin: 2em auto 1em;
 }
 
 .fpCollections figcaption {
     text-transform: uppercase;
     text-align: center;
     font-size: 1.6rem;
-    padding-top: 1em;
     font-family: var(--heading-font);
 }
 
 .flowersPage p {
     font-size: 1.5em;
-    margin-top: 0;
-    padding: 0 10px 10px 10px;
-    margin: auto;
-    max-width: 800px;
+    margin: 5px 2em 30px;
 }
-
-
-/*
-
-.flowersPage .btn {
-    display: grid;
-    margin: 1em auto;
-    padding: 10px 20px;
-    text-decoration: none;
-    background-color: var(--bg-btn-main);
-    border-radius: 6px;
-    color: var(--text);
-    place-items: center;
-}
-*/
 
 .fpBuild {
     background-color: var(--bg-light-pink);
@@ -852,31 +839,12 @@ iframe {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    margin: auto;
+    margin: 5px 50px;
     margin-bottom: 3rem;
 }
 
-/* .fpBuild article {
-    background: var(--bg-light-pink);
-    vertical-align: top;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    margin: 5px 10px 30px;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 6px; */
-
-    /*    max-width: 800px;*/
-    margin: 0 auto;
-}
-
-.fpBuild h2 {
-    margin-top: 30px;
-    margin-bottom: 20px;
+.fpBuild a.btn {
+    margin: 1em 0px;
 }
 
 .fpBuild img {
@@ -884,166 +852,39 @@ iframe {
     height: auto;
     max-height: 300px;
 }
-    /*
-    float: right;
-    margin-right: 20px;
-    margin-left: 20px
-*/
 
 .fpSales {
     text-align: center;
     max-width: 1000px;
-    margin: 20;
+    margin: 20px;
     background: var(--bg-dark-pink); 
 }
 
-.fpSales article {
-    
-}
-
-.fpSales .mobile1, .desktab {
-    background-color: var(--bg-dark-pink);
+.salesShowcase {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-}
-
-.fpSales .mobile1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    margin: 2em;
-}
-
-.fpSales .mobile1 .desktab {
-    background-color: var(--bg-dark-pink);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-}
-
-
-.fpSales figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
-
-/*
-.fpSales img {
-    max-width: 90%;
-    height: auto;
-    align-content: center;
-}
-*/
-
-@media only screen and (max-width: 768px) {
-    .desktab {
-    display: none;
-    }
-}
-
-/*
-.fpSales figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    background-color: rgba(113, 121, 126, 0.7);
-    display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: center;
-    height: 15%;
-    text-align: right;
-    padding-right: 10px;
-    color: white;
-    border-radius: 0 0 6px 6px;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-}
-*/
-
-
-
-
-
-/*
-.fpSales h2 {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    gap: 1em;
+    margin: 2em auto 5em;
 }
 
-.fpSales article {
-    background-color: var(--bg-dark-pink);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+.salesShowcase img {
     width: 100%;
-
-    /*    display: flex;*/
-    flex-wrap: wrap;
-    justify-content: space-around;
+    height: 90%;
 }
-
-.fpSales figure {
-    display: flex;
-    position: relative;
-    margin: 15px;
-    display: inline-block;
-    flex: 0 1 calc(20%)
-}
-
-.fpSales img {
-    max-width: 90%;
-    height: auto;
-    align-content: center;
-}
-
-.fpSales figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    background-color: rgba(113, 121, 126, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 15%;
-    text-align: right;
-    padding-right: 10px;
-    color: white;
-    border-radius: 0 0 6px 6px;
-    box-sizing: border-box;
-    font-size: 1.5rem;
-}
-*/
 
 
 /* ------------------------------------------------------
         PLANTS PAGE CONTENT
 -------------------------------------------------------*/
 
-
 .plantsPage {
     height: 10%;
     background-color: var(--bg-dark-pink);
 }
 
-
 .plantsPage h2 {
-    margin: 50 0 30 0;
+    margin: 50px 0px 30px 0px;
     text-align: center;
     width: 100%;
 }
@@ -1088,7 +929,7 @@ iframe {
     background-color: var(--bg-light-pink);
     text-align: center;
     /*    max-width: 800px;*/
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 .ppCare h2 {
@@ -1123,7 +964,6 @@ iframe {
 }
 
 .ppHypo article {
-    /*    display: flex;*/
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -1156,9 +996,6 @@ iframe {
     box-sizing: border-box;
     font-size: 1.5rem;
 }
-
-
-
 
 /* ------------------------------------------------------
         SEARCH BAR
@@ -1957,6 +1794,50 @@ iframe {
     .product-img {
         width: 450px;
     }
-
-
 }
+    
+ /* FOR FLOWERS PAGE */
+@media screen and (min-width: 700px) {
+ 
+    .fpCollections {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1em;
+        justify-content: space-evenly;
+        margin: 2em auto 5em;
+ }
+      
+    .fpBart {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+ }
+    
+ /* FOR PLANTS PAGE */
+@media screen and (min-width: 700px) {
+ 
+    .fpCollections {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1em;
+        justify-content: space-evenly;
+        margin: 2em auto 5em;
+ }
+      
+    .fpBart {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+ }    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
