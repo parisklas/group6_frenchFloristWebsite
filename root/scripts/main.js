@@ -40,7 +40,7 @@ const context = {
         {
             name: 'White Orchids',
             datePurchased: 'Nov. 30, 2023',
-            image: '../images/orders2.jpg'
+            image: '../images/orchids.jpg'
         },
         {
             name: 'Hello Fall',
